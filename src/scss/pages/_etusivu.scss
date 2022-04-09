@@ -1,0 +1,30 @@
+.Etusivu {
+	position: relative;
+	
+	img {
+		inline-size: 100%;
+	}
+	
+	.layer {
+		inline-size: 100%;
+		block-size: calc(100vh - 4rem);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// background-image: url('../../images/Selkahieronta.png');
+		// background-size: cover;
+		background-color: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		left: 0;
+		top: 0;
+		
+		p {
+			display: flex;
+			color: white;
+			font-size: 3rem;
+			inline-size: min-content;
+			// justify-content: center;
+			text-align: center;
+		}
+	}
+}

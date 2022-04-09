@@ -1,0 +1,44 @@
+@mixin defaultButton {
+	@include shadow;
+	@include buttonAnimation;
+	padding-block: .75rem;
+	padding-inline: 1rem;
+	background-color: $colorButton;
+	color: $white;
+	font-size: 1.25rem;
+	font-weight: bold;
+	border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin iconButton($size: 1.5rem) {
+	block-size: $size;
+	inline-size: $size;
+	background-color: transparent;
+	border-radius: 50%;
+	
+	svg {
+		padding: 10%;
+		block-size: $size;
+		inline-size: $size;
+		border-radius: 50%;
+		&:hover { background-color: rgba(255, 255, 255, 0.1); }
+	}
+}
+
+@mixin navbar($backgroundColor: $black1) {
+	display: flex;
+	background-color: $backgroundColor;
+	
+	button {
+		padding-inline: 1rem;
+		font-size: 1.5rem;
+		background-color: $backgroundColor;
+		color: $white;
+		&:hover { background-color: lighten($backgroundColor, 10%); }
+		&:focus { z-index: 1; }
+	}
+	
+	button.selected { color: $colorSecondary; }
+}

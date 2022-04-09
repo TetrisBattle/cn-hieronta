@@ -1,0 +1,289 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.returnButton {
+  block-size: 3rem;
+  inline-size: 3rem;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+}
+
+.returnButton svg {
+  padding: 10%;
+  block-size: 3rem;
+  inline-size: 3rem;
+  border-radius: 50%;
+}
+
+.returnButton svg:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainHeader {
+  block-size: 4rem;
+  -webkit-border-after: solid 0.063rem #7D7D7D;
+          border-block-end: solid 0.063rem #7D7D7D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #dc3843;
+}
+
+.mainHeader svg {
+  inline-size: 4rem;
+  block-size: 4rem;
+}
+
+.mainHeader nav {
+  display: none;
+}
+
+.mainHeader .menuIcon {
+  background-color: transparent;
+}
+
+@media (min-Width: 30rem) {
+  .mainHeader nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #dc3843;
+  }
+  .mainHeader nav button {
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    background-color: #dc3843;
+    color: #FFFFFF;
+  }
+  .mainHeader nav button:hover {
+    background-color: #e4636c;
+  }
+  .mainHeader nav button:focus {
+    z-index: 1;
+  }
+  .mainHeader nav button.selected {
+    color: #38dcd1;
+  }
+  .mainHeader .menuIcon {
+    display: none;
+  }
+}
+
+dialog {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 100vw;
+  block-size: 100vh;
+  background-color: transparent;
+}
+
+dialog .background {
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog .container {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  inline-size: 40rem;
+  block-size: 30rem;
+  background-color: #E3E3E3;
+  border-radius: .5rem;
+  border: none;
+}
+
+dialog .container header {
+  inline-size: 100%;
+  block-size: 3rem;
+  background-color: teal;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+dialog .container header[draggable=true] {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+dialog .container header h1 {
+  position: absolute;
+  inset-inline-start: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  color: #333;
+  line-height: 3rem;
+  font-size: 1.75rem;
+}
+
+dialog .container header .iconButton {
+  block-size: 3rem;
+  inline-size: 3rem;
+  background-color: transparent;
+  border-radius: 50%;
+  float: right;
+}
+
+dialog .container header .iconButton svg {
+  padding: 10%;
+  block-size: 3rem;
+  inline-size: 3rem;
+  border-radius: 50%;
+}
+
+dialog .container header .iconButton svg:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+dialog .container .content {
+  block-size: 100%;
+  padding: .5rem;
+}
+
+dialog .container .actions {
+  padding: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+dialog .container .actions button {
+  min-width: 6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-block: .75rem;
+  padding-inline: 1rem;
+  border-radius: 5rem;
+  background-color: teal;
+  color: #333;
+}
+
+.Etusivu {
+  position: relative;
+}
+
+.Etusivu img {
+  inline-size: 100%;
+}
+
+.Etusivu .layer {
+  inline-size: 100%;
+  block-size: calc(100vh - 4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.Etusivu .layer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 3rem;
+  inline-size: -webkit-min-content;
+  inline-size: -moz-min-content;
+  inline-size: min-content;
+  text-align: center;
+}
+
+.Yhteystiedot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  inline-size: 100vw;
+  block-size: calc(100vh - 4rem);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Yhteystiedot .GoogleMaps {
+  position: relative;
+  inline-size: 50vw;
+  block-size: 50vw;
+  max-block-size: calc(100vh - 4rem);
+}
+
+.Yhteystiedot .information {
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Yhteystiedot .information .title {
+  font-size: 3rem;
+}
+
+.Yhteystiedot .information :not(.title) {
+  line-height: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
