@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Home from 'pages/Home'
-import { Box } from '@mui/material'
+import { Stack } from '@mui/material'
 import { StoreContext } from 'providers/StoreProvider'
 
 export default function App() {
@@ -15,15 +15,15 @@ export default function App() {
 		))
 	)
 	return (
-		<Box height={'100vh'} display={'flex'} flexDirection={'column'}>
-			<Header pages={pages} />
-			<Box sx={{ height: '100%', overflow: 'auto' }}>
+		<Stack display='flex' minHeight='100vh'>
+			<Header />
+			<Stack sx={{ minHeight: '100%' }}>
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					{getRoutes()}
 				</Routes>
-			</Box>
+			</Stack>
 			<Footer />
-		</Box>
+		</Stack>
 	)
 }

@@ -11,8 +11,8 @@ import {
 	Button,
 } from '@mui/material'
 
-const Header = observer(({ pages }) => {
-	const { activePage, setActivePage } = useContext(StoreContext)
+const Header = observer(() => {
+	const { pages, activePage, setActivePage } = useContext(StoreContext)
 
 	const getButtons = () => (
 		pages.map((page) => {
@@ -20,10 +20,11 @@ const Header = observer(({ pages }) => {
 				key={page.path}
 				onClick={() => setActivePage(page.path)}
 				sx={{
+					boxShadow: 'none',
 					'& a': {
 						color: (theme) => activePage === page.path
 							? theme.palette.primary.contrastText
-							: theme.palette.primary.light
+							: theme.palette.text.mediumEmphasis,
 					}
 				}}>
 				<Link to={page.path}>{page.title}</Link>
@@ -32,7 +33,7 @@ const Header = observer(({ pages }) => {
 	)
 
 	return (
-		<AppBar sx={(theme) => theme.components.MuiAppBar.defaultProps.sx}>
+		<AppBar>
 			<Logo />
 			<Typography component='h1'>Rentolihas</Typography>
 			<Box className='buttons'>

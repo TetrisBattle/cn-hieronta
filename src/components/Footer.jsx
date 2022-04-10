@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Stack } from '@mui/material'
 
 export default function Footer() {
 	const info = {
@@ -13,34 +13,13 @@ export default function Footer() {
 	}
 
 	return (
-		<Box variant='footer'
-			component='footer'
-			className='footer'
-		>
-			<Box
-				variant='footer'
-				component='footer'
-				className='footer'
-				display='flex'
-				alignItems='center'
-				height='4rem'
-			sx={{
-				backgroundColor: (theme) => theme.palette.primary.main,
-				'& .MuiTypography-root': {
-					fontWeight: 'bold',
-					color: (theme) => theme.palette.primary.contrastText
-				},
-				display: 'flex',
-				justifyContent: 'space-evenly'
-			}}
-			>
-				<Typography sx={{ fontSize: 24 }}>{info.title}</Typography>
-				<Box>
-					<Typography>{info.address.street}</Typography>
-					<Typography>{info.address.postCode} {info.address.city}</Typography>
-				</Box>
-				<Typography>{info.phoneNumber}</Typography>
+		<Stack component='footer' type='footer'>
+			<Typography sx={{ fontSize: '1.5rem' }}>{info.title}</Typography>
+			<Box>
+				<Typography>{info.address.street}</Typography>
+				<Typography>{info.address.postCode} {info.address.city}</Typography>
 			</Box>
-		</Box>
+			<Typography>{info.phoneNumber}</Typography>
+		</Stack>
 	)
 }
