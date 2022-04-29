@@ -1,29 +1,24 @@
-import { useContext } from 'react'
-import { Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Navigate  } from "react-router-dom"
 import Header from 'components/Header'
+import Etusivu from 'pages/Etusivu'
+import Palvelut from 'pages/Palvelut'
 import Footer from 'components/Footer'
-import Home from 'pages/Home'
-import { Stack } from '@mui/material'
-import { StoreContext } from 'providers/StoreProvider'
+import 'styles/sass/main.css'
 
 export default function App() {
-	const { pages } = useContext(StoreContext)
-
-	const getRoutes = () => (
-		pages.map(({ path, element }) => (
-			<Route key={path} exact path={path} element={element} />
-		))
-	)
 	return (
-		<Stack display='flex' minHeight='100vh'>
-			<Header />
-			<Stack sx={{ minHeight: '100%' }}>
-				<Routes>
-					<Route exact path='/' element={<Home />} />
-					{getRoutes()}
-				</Routes>
-			</Stack>
-			<Footer />
-		</Stack>
+		<>
+			<Router>
+				<Header />
+				<main>
+					<Routes>
+						<Route exact path="/" element={<Navigate replace to="/Etusivu" />} />
+						<Route exact path='/Etusivu' element={<Etusivu />} />
+						<Route exact path='/Palvelut' element={<Palvelut />} />
+					</Routes>
+				</main>
+				<Footer />
+			</Router>
+		</>
 	)
 }

@@ -1,0 +1,19 @@
+@import './variables';
+@import './components';
+@import './pages/Etusivu';
+@import './pages/Palvelut';
+
+* {
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+a { all: unset; }
+ul { list-style-type: none; }
+
+main {
+	min-height: $mainContentHeight;
+	// background: linear-gradient(135deg, $colorPrimary,  lighten($colorPrimary, 40%));
+}

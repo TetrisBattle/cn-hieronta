@@ -1,45 +1,33 @@
-import { useContext } from 'react'
-import { StoreContext } from 'providers/StoreProvider'
-import { observer } from 'mobx-react-lite';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import { ReactComponent as Logo } from 'images/svg/Logo.svg'
+import { Button } from '@mui/material'
+import { useState } from "react"
 
-import {
-	AppBar,
-	Typography,
-	Box,
-	Button,
-} from '@mui/material'
-
-const Header = observer(() => {
-	const { pages, activePage, setActivePage } = useContext(StoreContext)
-
-	const getButtons = () => (
-		pages.map((page) => {
-			return <Button
-				key={page.path}
-				onClick={() => setActivePage(page.path)}
-				sx={{
-					boxShadow: 'none',
-					'& a': {
-						color: (theme) => activePage === page.path
-							? theme.palette.primary.contrastText
-							: theme.palette.text.mediumEmphasis,
-					}
-				}}>
-				<Link to={page.path}>{page.title}</Link>
-			</Button>
-		})
-	)
+export default function Header() {
+	const [currentPage, setCurrentPage] = useState(window.location.pathname)
+	const colorHighLight = '#2dffff'
 
 	return (
-		<AppBar>
+		<header>
 			<Logo />
-			<Typography component='h1'>Rentolihas</Typography>
-			<Box className='buttons'>
-				{getButtons()}
-			</Box>
-		</AppBar>
+
+			<h1>Rentolihas</h1>
+
+			<nav>
+        <Button
+					variant="text"
+					component={Link} to={'/Etusivu'}
+					onClick={() => setCurrentPage('/Etusivu')}
+					style={{ color: currentPage === '/Etusivu' ? colorHighLight : 'inherit' }}
+				>Etusivu</Button>
+
+        <Button
+					variant="text"
+					component={Link} to={'/Palvelut'}
+					onClick={() => setCurrentPage('/Palvelut')}
+					style={{ color: currentPage === '/Palvelut' ? colorHighLight : 'inherit' }}
+				>Palvelut</Button>
+			</nav>
+		</header>
 	)
-})
-export default Header
+}

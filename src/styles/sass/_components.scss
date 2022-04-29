@@ -1,0 +1,44 @@
+header {
+	height: $headerHeight;
+	display: flex;
+	align-items: center;
+	background-color: $colorPrimary;
+	color: white;
+	font-size: 1.5rem;
+
+	svg {
+		height: 100%;
+		aspect-ratio: 1 / 1;
+	}
+
+	h1 {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-left: 1.5rem;
+	}
+
+	nav {
+		height: 100%;
+		margin-left: auto;
+
+		.MuiButton-root {
+			height: 100%;
+			color: inherit;
+			font-size: inherit;
+		}
+	}
+}
+
+footer {
+	height: $footerHeight;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $colorPrimary;
+	color: white;
+	font-weight: bold;
+	gap: 3rem;
+	font-size: 1.5rem;
+
+	> p:first-of-type { font-size: 2rem; }
+}

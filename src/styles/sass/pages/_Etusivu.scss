@@ -1,0 +1,33 @@
+.Etusivu {
+	display: flex;
+
+	img {
+		$imgWidth: 40vw;
+		width: $imgWidth;
+		height: calc(4 / 3 * $imgWidth);
+	}
+
+	.content {
+		padding: 0 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+
+		h2 {
+			margin-top: 1rem;
+			font-size: 1.5rem;
+
+			&:first-of-type {
+				margin-top: .5rem;
+				font-size: 2rem;
+			}
+		}
+
+		p { font-size: 1rem; }
+	}
+
+	.MuiButton-root {
+		margin: 1rem 0;
+		font-size: 1.5rem;
+	}
+}
