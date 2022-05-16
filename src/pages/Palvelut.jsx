@@ -49,7 +49,7 @@ export default function Palvelut() {
 				</div>
 
 				<div className='ajanvaraus'>
-					<h2>Ajanvaraus</h2><br />
+					<h2>Ajanvaraus</h2>
 					<p>
 						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
 						tulleesta linkinstä, soittamalla tai tekstiviestillä.

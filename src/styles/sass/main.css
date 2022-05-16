@@ -77,6 +77,7 @@ footer > div:last-of-type a {
 }
 .Palvelut h2 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .Palvelut h2:not(:first-of-type) {
   margin-top: 2rem;
