@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MuiThemeProvider from 'providers/MuiThemeProvider'
+import { ThemeProvider } from '@mui/material/styles'
+import MuiTheme from 'styles/MuiTheme'
 import App from 'App'
 
 ReactDOM.render(
 	<React.StrictMode>
-			<MuiThemeProvider>
-				<App />
-			</MuiThemeProvider>
+		<ThemeProvider theme={MuiTheme}>
+			<App />
+		</ThemeProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 )
