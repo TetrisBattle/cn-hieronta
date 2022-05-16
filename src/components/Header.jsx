@@ -14,7 +14,7 @@ export default function Header() {
 					variant="text"
 					component={Link} to={'/Etusivu'}
 					onClick={() => setCurrentPage('/Etusivu')}
-					current-page={currentPage === '/Etusivu' ? 'true' : null }
+					current-page={currentPage === '/Etusivu' || currentPage === '/' ? 'true' : null }
 				>Etusivu</Button>
 
         <Button
