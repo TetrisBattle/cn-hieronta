@@ -20,7 +20,8 @@ export default function Etusivu() {
 				</p>
 
 				<p>
-					Annan mielelläni hoidon aikana neuvoja treenaamiseen, palautumiseen ja syömiseen.
+					Annan mielelläni hoidon aikana neuvoja treenaamiseen,
+					palautumiseen ja syömiseen.
 				</p>
 			</div>
 		</main>
