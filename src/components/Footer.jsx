@@ -1,14 +1,16 @@
 import React from 'react'
+import { ReactComponent as Facebook } from 'images/Facebook.svg'
+import { ReactComponent as Twitter } from 'images/Twitter.svg'
 
 export default function Footer() {
 	const info = {
 		title: 'Rentolihas',
 		address: {
-			street: 'Otokuja 2 D 303',
+			street: 'Kauppurienkatu 10',
 			city: 'Oulu',
-			postCode: '90150',
+			postCode: '90100',
 		},
-		phoneNumber: '0402157957'
+		phoneNumber: '0404145767'
 	}
 
 	return (
@@ -19,6 +21,14 @@ export default function Footer() {
 				<p>{info.address.postCode} {info.address.city}</p>
 			</div>
 			<p>{info.phoneNumber}</p>
+			<div>
+				<a href="https://www.facebook.com/camtu.nguyen.184007">
+					<Facebook />
+				</a>
+				<a href="https://www.facebook.com/camtu.nguyen.184007">
+					<Twitter />
+				</a>
+			</div>
 		</footer>
 	)
 }

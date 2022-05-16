@@ -1,23 +1,28 @@
 import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
 
-const theme = createTheme({
-	palette: {
-		mode: 'light',
+let theme = createTheme({
+  palette: {
 		primary: {
-			main: red[900],
-			light: red[700],
-			dark: '#840000',
-			contrastText: '#fff',
+			main: '#F8E5AC',
+			light: '#f9eabc',
+			dark: '#f1cc5e',
+			contrastText: '#333',
 		},
-	},
+    secondary: {
+      main: '#edf2ff',
+    },
+  },
+});
+
+theme = createTheme(theme, {
 	components: {
 		MuiButton: {
 			defaultProps: {
 				variant: 'contained',
 				sx: {
 					fontWeight: 'bold',
-					fontSize: '1rem'
+					fontSize: '1.5rem',
+					textTransform: 'none'
 				}
 			},
 			variants: [
@@ -48,7 +53,6 @@ const theme = createTheme({
 					'& > h1': {
 						fontSize: '2rem',
 						fontWeight: 'bold',
-						color: '#333',
 						marginLeft: '1.5rem'
 					},
 					'& > .buttons': {

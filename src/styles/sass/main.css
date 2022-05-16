@@ -2,27 +2,27 @@ header {
   height: 4.5rem;
   display: flex;
   align-items: center;
-  background-color: #b71c1c;
-  color: white;
-  font-size: 1.5rem;
-}
-header svg {
-  height: 100%;
-  aspect-ratio: 1/1;
+  background-color: #F8E5AC;
 }
 header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-left: 1.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 header nav {
+  min-width: max-content;
   height: 100%;
   margin-left: auto;
+  margin-right: 3rem;
 }
 header nav .MuiButton-root {
   height: 100%;
-  color: inherit;
-  font-size: inherit;
+  font-size: 2rem;
+  color: #333;
+}
+header nav .MuiButton-root[current-page] {
+  color: #ff0000;
 }
 
 footer {
@@ -30,8 +30,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b71c1c;
-  color: white;
+  background-color: #F8E5AC;
   font-weight: bold;
   gap: 3rem;
   font-size: 1.5rem;
@@ -39,33 +38,67 @@ footer {
 footer > p:first-of-type {
   font-size: 2rem;
 }
+footer > div:last-of-type {
+  display: flex;
+  gap: 0.25rem;
+}
+footer > div:last-of-type a {
+  cursor: pointer;
+}
 
 .Etusivu {
   display: flex;
+  align-items: center;
+  padding: 4rem;
 }
 .Etusivu img {
-  width: 40vw;
-  height: 53.3333333333vw;
+  height: calc(100vh - 4.5rem - 4.5rem - 8rem);
+  padding-left: 2rem;
 }
 .Etusivu .content {
-  padding: 0 2rem;
+  padding-left: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-.Etusivu .content h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-.Etusivu .content h2:first-of-type {
-  margin-top: 0.5rem;
-  font-size: 2rem;
+  gap: 2rem;
 }
 .Etusivu .content p {
-  font-size: 1rem;
+  font-size: 1.75rem;
 }
-.Etusivu .MuiButton-root {
-  margin: 1rem 0;
+
+.Palvelut {
+  display: flex;
+  gap: max(8vw, 4rem);
+  padding: 4rem;
+  justify-content: center;
+}
+.Palvelut > div {
+  width: 50%;
+  justify-self: center;
+}
+.Palvelut h2 {
+  font-size: 2rem;
+}
+.Palvelut h2:not(:first-of-type) {
+  margin-top: 2rem;
+}
+.Palvelut p, .Palvelut li {
+  font-size: 1.5rem;
+}
+.Palvelut .tarjonta ul {
+  padding-left: 1.5rem;
+}
+.Palvelut .hinnasto div {
+  display: flex;
+  gap: 4rem;
+}
+.Palvelut .hinnasto ul {
+  list-style-type: none;
+}
+.Palvelut .ajanvaraus h2 {
+  margin-top: 2rem;
+}
+.Palvelut .ajanvaraus .MuiButton-root {
+  margin-top: 2rem;
   font-size: 1.5rem;
 }
 
@@ -74,16 +107,16 @@ footer > p:first-of-type {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  color: #333;
 }
 
 a {
   all: unset;
 }
 
-ul {
-  list-style-type: none;
+#root {
+  background: linear-gradient(135deg, white, #fcf4db);
 }
-
-main {
+#root main {
   min-height: calc(100vh - 4.5rem - 4.5rem);
-}/*# sourceMappingURL=main.css.map */
+}

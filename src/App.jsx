@@ -10,13 +10,11 @@ export default function App() {
 		<>
 			<Router>
 				<Header />
-				<main>
 					<Routes>
 						<Route exact path="/" element={<Navigate replace to="/Etusivu" />} />
 						<Route exact path='/Etusivu' element={<Etusivu />} />
 						<Route exact path='/Palvelut' element={<Palvelut />} />
 					</Routes>
-				</main>
 				<Footer />
 			</Router>
 		</>

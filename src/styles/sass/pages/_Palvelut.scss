@@ -1,0 +1,40 @@
+.Palvelut {
+	display: flex;
+	gap: Max(8vw, 4rem);
+	padding: 4rem;
+	justify-content: center;
+
+	> div {
+		width: 50%;
+		// display: flex;
+		justify-self: center;
+	}
+
+	h2 {
+		font-size: 2rem;
+		&:not(:first-of-type) { margin-top: 2rem; }
+	}
+
+	p, li { font-size: 1.5rem; }
+
+	.tarjonta {
+		ul { padding-left: 1.5rem; }
+	}
+
+	.hinnasto {
+		div {
+			display: flex;
+			gap: 4rem;
+		}
+
+		ul { list-style-type: none; }
+	}
+
+	.ajanvaraus {
+		h2 { margin-top: 2rem; }
+		.MuiButton-root {
+			margin-top: 2rem;
+			font-size: 1.5rem;
+		}
+	}
+}

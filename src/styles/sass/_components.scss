@@ -3,28 +3,25 @@ header {
 	display: flex;
 	align-items: center;
 	background-color: $colorPrimary;
-	color: white;
-	font-size: 1.5rem;
-
-	svg {
-		height: 100%;
-		aspect-ratio: 1 / 1;
-	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 3rem;
 		font-weight: bold;
-		margin-left: 1.5rem;
+		margin-left: 50%;
+		transform: translateX(-50%);
 	}
 
 	nav {
+		min-width: max-content;
 		height: 100%;
 		margin-left: auto;
+		margin-right: 3rem;
 
 		.MuiButton-root {
 			height: 100%;
-			color: inherit;
-			font-size: inherit;
+			font-size: 2rem;
+			color: $colorText;
+			&[current-page] { color: $colorSecondary; }
 		}
 	}
 }
@@ -35,10 +32,14 @@ footer {
 	justify-content: center;
 	align-items: center;
 	background-color: $colorPrimary;
-	color: white;
 	font-weight: bold;
 	gap: 3rem;
 	font-size: 1.5rem;
 
 	> p:first-of-type { font-size: 2rem; }
+	> div:last-of-type {
+		display: flex;
+		gap: .25rem;
+		a { cursor: pointer; }
+	}
 }
