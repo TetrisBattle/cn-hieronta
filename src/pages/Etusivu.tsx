@@ -16,7 +16,7 @@ export default function Etusivu() {
 				<p>
 					Teen klassista-, urheilu- ja purentalihasten hierontaa.
 					Hoidossa yhdistelen klassisen- ja urheiluhieronnan tekniikoita,
-					sekä trigger-, ja fasciatekniikoita. Kinesio-, lymfa- ja kovateippausta.
+					sekä trigger-, ja fasciatekniikoita. Teen myös kinesio-, lymfa- ja kovateippausta.
 				</p>
 
 				<p>

@@ -1,41 +1,39 @@
 .Palvelut {
 	display: flex;
-	gap: Max(8vw, 4rem);
+	justify-content: space-evenly;
 	padding: 4rem;
-	justify-content: center;
 
-	> div {
-		width: 50%;
-		// display: flex;
-		justify-self: center;
-	}
+	.split, .hinnat {
+		max-width: 30vw;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
 
-	h2 {
-		font-size: 2rem;
-		&:not(:first-of-type) { margin-top: 2rem; }
-		margin-bottom: .5rem;
-	}
-
-	p, li { font-size: 1.5rem; }
-
-	.tarjonta {
-		ul { padding-left: 1.5rem; }
-	}
-
-	.hinnasto {
-		div {
-			display: flex;
-			gap: 4rem;
+		h2 {
+			font-size: 1.75rem;
+			margin-bottom: .25rem;
 		}
 
-		ul { list-style-type: none; }
-	}
+		p, li {
+			font-size: 1.25rem;
+			color: $colorText2;
+		}
 
-	.ajanvaraus {
-		h2 { margin-top: 2rem; }
-		.MuiButton-root {
-			margin-top: 2rem;
-			font-size: 1.5rem;
+		&.leftSide {
+			ul { padding-left: 1.5rem; }
+		}
+
+		&.rightSide {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+
+			.hinnat {
+				white-space: pre-wrap;
+				ul { list-style-type: none; }
+			}
+
+			button { width: max-content; }
 		}
 	}
 }

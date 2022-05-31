@@ -1,12 +1,12 @@
 .Etusivu {
 	display: flex;
 	align-items: center;
-	padding: 4rem;
+	padding-right: 2rem;
 
 	img {
 		$imgWidth: 30rem;
-		height: calc($mainContentHeight - 8rem);
-		padding-left: 2rem;
+		height: $mainContentHeight;
+		padding-left: 0rem;
 	}
 
 	.content {
@@ -15,6 +15,6 @@
 		flex-direction: column;
 		gap: 2rem;
 
-		p { font-size: 1.75rem; }
+		p { font-size: 1.5rem; }
 	}
 }

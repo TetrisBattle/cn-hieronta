@@ -15,5 +15,8 @@ a { all: unset; }
 
 #root {
 	main { min-height: $mainContentHeight; }
-	background: linear-gradient(135deg, white,  lighten($colorPrimary, 10%));
+	background: linear-gradient(
+		135deg, lighten($colorPrimary, 40%),
+		lighten($colorPrimary, 10%)
+	);
 }

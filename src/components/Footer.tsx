@@ -1,10 +1,9 @@
-import React from 'react'
 import { ReactComponent as Facebook } from 'images/Facebook.svg'
 import { ReactComponent as Twitter } from 'images/Twitter.svg'
 
 export default function Footer() {
 	const info = {
-		title: 'Rentolihas',
+		title: 'Hierontapiste',
 		address: {
 			street: 'Kauppurienkatu 10',
 			city: 'Oulu',

@@ -1,28 +1,53 @@
+button {
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.06rem 0.19rem rgba(0, 0, 0, 0.12), 0 0.06rem 0.125rem rgba(0, 0, 0, 0.24);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+}
+button:hover {
+  background-color: #050505;
+}
+
 header {
-  height: 4.5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
-  background-color: #F8E5AC;
+  font-weight: bold;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 }
 header h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   margin-left: 50%;
   transform: translateX(-50%);
+  background: linear-gradient(#fff500, #666200);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
 }
 header nav {
   min-width: max-content;
-  height: 100%;
   margin-left: auto;
   margin-right: 3rem;
 }
-header nav .MuiButton-root {
-  height: 100%;
-  font-size: 2rem;
-  color: #333;
+header nav a {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
 }
-header nav .MuiButton-root[current-page] {
-  color: #ff0000;
+header nav a:hover {
+  color: #fff966;
+}
+header nav a[data-current-page] {
+  color: #fff500;
 }
 
 footer {
@@ -30,13 +55,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F8E5AC;
+  background-color: #121212;
   font-weight: bold;
   gap: 3rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 footer > p:first-of-type {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 footer > div:last-of-type {
   display: flex;
@@ -49,11 +74,11 @@ footer > div:last-of-type a {
 .Etusivu {
   display: flex;
   align-items: center;
-  padding: 4rem;
+  padding-right: 2rem;
 }
 .Etusivu img {
-  height: calc(100vh - 4.5rem - 4.5rem - 8rem);
-  padding-left: 2rem;
+  height: calc(100vh - 5rem - 4.5rem);
+  padding-left: 0rem;
 }
 .Etusivu .content {
   padding-left: 6rem;
@@ -62,45 +87,44 @@ footer > div:last-of-type a {
   gap: 2rem;
 }
 .Etusivu .content p {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .Palvelut {
   display: flex;
-  gap: max(8vw, 4rem);
+  justify-content: space-evenly;
   padding: 4rem;
-  justify-content: center;
 }
-.Palvelut > div {
-  width: 50%;
-  justify-self: center;
+.Palvelut .split, .Palvelut .hinnat {
+  max-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.Palvelut h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.Palvelut .split h2, .Palvelut .hinnat h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
 }
-.Palvelut h2:not(:first-of-type) {
-  margin-top: 2rem;
+.Palvelut .split p, .Palvelut .split li, .Palvelut .hinnat p, .Palvelut .hinnat li {
+  font-size: 1.25rem;
+  color: #E0E0E0;
 }
-.Palvelut p, .Palvelut li {
-  font-size: 1.5rem;
-}
-.Palvelut .tarjonta ul {
+.Palvelut .split.leftSide ul, .Palvelut .hinnat.leftSide ul {
   padding-left: 1.5rem;
 }
-.Palvelut .hinnasto div {
+.Palvelut .split.rightSide, .Palvelut .hinnat.rightSide {
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.Palvelut .hinnasto ul {
+.Palvelut .split.rightSide .hinnat, .Palvelut .hinnat.rightSide .hinnat {
+  white-space: pre-wrap;
+}
+.Palvelut .split.rightSide .hinnat ul, .Palvelut .hinnat.rightSide .hinnat ul {
   list-style-type: none;
 }
-.Palvelut .ajanvaraus h2 {
-  margin-top: 2rem;
-}
-.Palvelut .ajanvaraus .MuiButton-root {
-  margin-top: 2rem;
-  font-size: 1.5rem;
+.Palvelut .split.rightSide button, .Palvelut .hinnat.rightSide button {
+  width: max-content;
 }
 
 * {
@@ -108,7 +132,7 @@ footer > div:last-of-type a {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #fff;
 }
 
 a {
@@ -116,8 +140,8 @@ a {
 }
 
 #root {
-  background: linear-gradient(135deg, white, #fcf4db);
+  background: linear-gradient(135deg, #787878, #2c2c2c);
 }
 #root main {
-  min-height: calc(100vh - 4.5rem - 4.5rem);
+  min-height: calc(100vh - 5rem - 4.5rem);
 }
