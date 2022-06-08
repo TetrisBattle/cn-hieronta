@@ -1,5 +1,5 @@
 import { ReactComponent as Facebook } from 'images/Facebook.svg'
-import { ReactComponent as Twitter } from 'images/Twitter.svg'
+import Instagram from 'images/Instagram.png'
 
 export default function Footer() {
 	const info = {
@@ -14,18 +14,16 @@ export default function Footer() {
 
 	return (
 		<footer>
-			<p>{info.title}</p>
-			<div>
-				<p>{info.address.street}</p>
-				<p>{info.address.postCode} {info.address.city}</p>
-			</div>
+			<p className='title'>{info.title}</p>
+			<p>{info.address.street}, {info.address.postCode} {info.address.city}</p>
 			<p>{info.phoneNumber}</p>
-			<div>
+
+			<div className='icons'>
 				<a href="https://www.facebook.com/camtu.nguyen.184007">
 					<Facebook />
 				</a>
 				<a href="https://www.facebook.com/camtu.nguyen.184007">
-					<Twitter />
+					<img src={Instagram} width={24} alt="Instagram" />
 				</a>
 			</div>
 		</footer>

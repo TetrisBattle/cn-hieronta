@@ -1,30 +1,35 @@
 interface IList {
 	props: {
-		title: string;
-		items: string[];
+		className?: string
+		title: string
+		items: string[]
 	}
 }
 
 const List = ({ props }: IList) => {
-	const { title, items } = props
+	const { className, title, items } = props
 
-	return <div>
-		<h2>{title}</h2>
-		<ul>
-			{items.map((item) => <li key={item}>{item}</li>)}
-		</ul>
-	</div>
+	return (
+		<div className={className}>
+			<h2>{title}</h2>
+			<ul>
+				{items.map((item) => (
+					<li key={item}>{item}</li>
+				))}
+			</ul>
+		</div>
+	)
 }
 
-export default function Palvelut() {
+export default function Hinnastot() {
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
 			'Rentouttaa',
 			'Lievittää lihasjännityksiä ja särkyjä',
 			'Parantaa nivelten liikkuvuutta',
-			'Nopeuttaa parantumista'
-		]
+			'Nopeuttaa parantumista',
+		],
 	}
 
 	const urheiluhieronta = {
@@ -33,8 +38,8 @@ export default function Palvelut() {
 			'kisakauteen sopiva hieronta',
 			'arpikudosten poisto',
 			'vammojen ennaltaehkäisy',
-			'auttaa lihashuollossa'
-		]
+			'auttaa lihashuollossa',
+		],
 	}
 
 	const purentalihastenHieronta = {
@@ -42,43 +47,33 @@ export default function Palvelut() {
 		items: [
 			'pään, niska- ja hartiaseudun kireyksiin',
 			'korvan tinnitukseen ja särkyyn',
-			'äänentuottoon ja puheen puuroutumiseen'
-		]
+			'äänentuottoon ja puheen puuroutumiseen',
+		],
 	}
 
 	const hinnasto1 = {
 		title: 'Klassinen- /urheiluhieronta',
-		items: [
-			'30min\t77e',
-			'60min\t90e',
-			'90min\t12e',
-			'120min\t15e'
-		]
+		items: ['30min\t77e', '60min\t90e', '90min\t12e', '120min\t15e'],
+		className: 'hinnasto',
 	}
 
 	const hinnasto2 = {
 		title: 'Purentalihastenhieronta',
-		items: [
-			`30min\t78e`,
-			`60min\t91e`,
-			`90min\t13e`
-		]
+		items: [`30min\t78e`, `60min\t91e`, `90min\t13e`],
+		className: 'hinnasto',
 	}
 
 	return (
-		<main className='Palvelut'>
-			<div className='leftSide split'>
+		<main className='Hinnastot grid'>
+			<div className='leftSide grid'>
 				<List props={klassinenHieronta} />
 				<List props={urheiluhieronta} />
 				<List props={purentalihastenHieronta} />
 			</div>
 
-			<div className='rightSide split'>
-				<div className="hinnat">
-					<List props={hinnasto1} />
-					<List props={hinnasto2} />
-				</div>
-
+			<div className='rightSide grid'>
+				<List props={hinnasto1} />
+				<List props={hinnasto2} />
 				<div>
 					<h2>Ajanvaraus</h2>
 					<p>

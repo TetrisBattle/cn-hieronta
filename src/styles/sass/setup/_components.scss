@@ -1,0 +1,111 @@
+button {
+	$colorButton: black;
+	padding-block: .75rem;
+	padding-inline: 1rem;
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	box-shadow: (
+		0 .06rem .19rem rgba(0, 0, 0, 0.12),
+		0 .06rem 0.125rem rgba(0, 0, 0, 0.24)
+	);
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: $colorText;
+	background-color: $colorButton;
+	&:hover { background-color: lighten($colorButton, 2%); }
+}
+
+header {
+	height: $headerHeight;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	background: linear-gradient(
+		rgba(black, .7),
+		rgba(black, .1)
+	);
+
+	h1 {
+		font-size: 2.5rem;
+		margin-left: 1rem;
+		flex: 1;
+
+		background: linear-gradient(
+			$colorSecondary,
+			darken($colorSecondary, 20%)
+		);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-style: italic;
+	}
+
+	nav { display: none; }
+
+	.MenuButton {
+		box-shadow: none;
+		width: $headerHeight;
+		svg {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+
+	@media (min-width: $breakpoint) {
+		h1 {
+			margin-left: 2rem;
+		}
+
+		nav {
+			display: block;
+			margin-right: 3rem;
+
+			a {
+				font-size: 1.5rem;
+				color: $colorText;
+				&:hover { color: lighten($colorSecondary, 20%) }
+				cursor: pointer;
+				padding-block: .75rem;
+				padding-inline: 1rem;
+				&[data-current-page] { color: $colorSecondary; }
+			}
+		}
+
+		.MenuButton { display: none; }
+	}
+}
+
+footer {
+	min-height: $footerHeight;
+	background-color: $colorPrimary;
+	padding: .5rem;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: .5rem;
+
+	p {
+		font-size: 1.125rem;
+	}
+
+	.title {
+		font-size: 1.75rem;
+		color: $colorSecondary;
+		font-style: italic;
+	}
+
+	.icons {
+		display: flex;
+		gap: .5rem;
+		a { cursor: pointer; }
+	}
+
+	@media (min-width: $breakpoint) {
+		flex-direction: row;
+	}
+}

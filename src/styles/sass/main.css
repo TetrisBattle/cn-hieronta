@@ -1,3 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+a {
+  all: unset;
+}
+
+ul {
+  list-style: none;
+}
+
 button {
   padding-block: 0.75rem;
   padding-inline: 1rem;
@@ -24,124 +45,161 @@ header {
 }
 header h1 {
   font-size: 2.5rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(#fff500, #666200);
+  margin-left: 1rem;
+  flex: 1;
+  background: linear-gradient(#fff500, #999300);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
 }
 header nav {
-  min-width: max-content;
-  margin-left: auto;
-  margin-right: 3rem;
+  display: none;
 }
-header nav a {
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  padding-block: 0.75rem;
-  padding-inline: 1rem;
+header .MenuButton {
+  box-shadow: none;
+  width: 5rem;
 }
-header nav a:hover {
-  color: #fff966;
+header .MenuButton svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
-header nav a[data-current-page] {
-  color: #fff500;
+@media (min-width: 45rem) {
+  header h1 {
+    margin-left: 2rem;
+  }
+  header nav {
+    display: block;
+    margin-right: 3rem;
+  }
+  header nav a {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+  }
+  header nav a:hover {
+    color: #fff966;
+  }
+  header nav a[data-current-page] {
+    color: #fff500;
+  }
+  header .MenuButton {
+    display: none;
+  }
 }
 
 footer {
-  height: 4.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 4rem;
   background-color: #121212;
-  font-weight: bold;
-  gap: 3rem;
-  font-size: 1rem;
-}
-footer > p:first-of-type {
-  font-size: 1.5rem;
-}
-footer > div:last-of-type {
+  padding: 0.5rem;
+  text-align: center;
   display: flex;
-  gap: 0.25rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
 }
-footer > div:last-of-type a {
+footer p {
+  font-size: 1.125rem;
+}
+footer .title {
+  font-size: 1.75rem;
+  color: #fff500;
+  font-style: italic;
+}
+footer .icons {
+  display: flex;
+  gap: 0.5rem;
+}
+footer .icons a {
   cursor: pointer;
+}
+@media (min-width: 45rem) {
+  footer {
+    flex-direction: row;
+  }
 }
 
 .Etusivu {
-  display: flex;
-  align-items: center;
-  padding-right: 2rem;
+  padding: 2rem;
 }
 .Etusivu img {
-  height: calc(100vh - 5rem - 4.5rem);
-  padding-left: 0rem;
+  display: block;
+  width: 70vw;
+  max-width: calc((100vh - 5rem - 4rem - 4rem) * 1.333);
+  max-width: 33rem;
+  max-height: calc(100vh - 5rem - 4rem - 4rem);
+  margin: 0 auto;
+  object-fit: cover;
 }
-.Etusivu .content {
-  padding-left: 6rem;
+.Etusivu section {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
-.Etusivu .content p {
-  font-size: 1.5rem;
+@media (min-width: 45rem) {
+  .Etusivu {
+    display: flex;
+    gap: 2rem;
+  }
+  .Etusivu img {
+    width: 50%;
+    margin: unset;
+  }
+  .Etusivu p {
+    font-size: 1.25rem;
+  }
 }
 
-.Palvelut {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 4rem;
+.Hinnastot {
+  padding: 1rem 2rem;
 }
-.Palvelut .split, .Palvelut .hinnat {
-  max-width: 30vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.Hinnastot.grid, .Hinnastot .grid {
+  display: grid;
+  gap: 1rem;
 }
-.Palvelut .split h2, .Palvelut .hinnat h2 {
-  font-size: 1.75rem;
+.Hinnastot .leftSide ul {
+  list-style-type: unset;
+  padding-left: 1.25rem;
+}
+.Hinnastot h2 {
+  font-size: 1.25rem;
   margin-bottom: 0.25rem;
 }
-.Palvelut .split p, .Palvelut .split li, .Palvelut .hinnat p, .Palvelut .hinnat li {
-  font-size: 1.25rem;
+.Hinnastot p, .Hinnastot li {
   color: #E0E0E0;
 }
-.Palvelut .split.leftSide ul, .Palvelut .hinnat.leftSide ul {
-  padding-left: 1.5rem;
-}
-.Palvelut .split.rightSide, .Palvelut .hinnat.rightSide {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-.Palvelut .split.rightSide .hinnat, .Palvelut .hinnat.rightSide .hinnat {
+.Hinnastot .rightSide {
   white-space: pre-wrap;
 }
-.Palvelut .split.rightSide .hinnat ul, .Palvelut .hinnat.rightSide .hinnat ul {
-  list-style-type: none;
+.Hinnastot .rightSide button {
+  margin-top: 1rem;
+  max-width: max-content;
 }
-.Palvelut .split.rightSide button, .Palvelut .hinnat.rightSide button {
-  width: max-content;
+@media (min-width: 45rem) {
+  .Hinnastot {
+    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Hinnastot .leftSide {
+    grid-auto-columns: min(100%, 30rem);
+    grid-template-rows: repeat(auto-fit, 7rem);
+  }
+  .Hinnastot .rightSide {
+    grid-auto-columns: min(100%, 30rem);
+    grid-template-rows: 7rem 7rem max-content max-content;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
-}
-
-a {
-  all: unset;
-}
-
-#root {
+body > #root {
   background: linear-gradient(135deg, #787878, #2c2c2c);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-#root main {
-  min-height: calc(100vh - 5rem - 4.5rem);
+body > #root main {
+  flex: 1;
 }

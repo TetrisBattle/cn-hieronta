@@ -1,22 +1,17 @@
-@import './variables';
-@import './components';
+@import './setup/variables';
+@import './setup/reset';
+@import './setup/components';
 @import './pages/Etusivu';
-@import './pages/Palvelut';
+@import './pages/Hinnastot';
 
-* {
-	box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-	font-family: Arial, sans-serif;
-	color: $colorText;
-}
-
-a { all: unset; }
-
-#root {
-	main { min-height: $mainContentHeight; }
+body > #root {
 	background: linear-gradient(
 		135deg, lighten($colorPrimary, 40%),
 		lighten($colorPrimary, 10%)
 	);
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	main { flex: 1; }
 }

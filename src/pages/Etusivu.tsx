@@ -4,9 +4,12 @@ export default function Etusivu() {
 	return (
 		<main className='Etusivu'>
 			<img src={CamTuImg} alt="Selkahieronta" />
+			{/* <img src={CamTuImg} alt="Selkahieronta" width="1200" height="1600" /> */}
 
-			<div className='content'>
-				<p>Minun nimeni on CamTu Nguyen. Olen 24- vuotias.</p>
+			<section>
+				<p>
+					Minun nimeni on CamTu Nguyen. Olen 24- vuotias.
+				</p>
 
 				<p>
 					Aiemmalta ammatiltani olen lähihoitaja, 2021 kävin kuntosalivalmennus
@@ -23,7 +26,7 @@ export default function Etusivu() {
 					Annan mielelläni hoidon aikana neuvoja treenaamiseen,
 					palautumiseen ja syömiseen.
 				</p>
-			</div>
+			</section>
 		</main>
 	)
 }
