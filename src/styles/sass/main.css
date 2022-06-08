@@ -159,7 +159,7 @@ footer .icons a {
 }
 .Hinnastot.grid, .Hinnastot .grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 .Hinnastot .leftSide ul {
   list-style-type: unset;
