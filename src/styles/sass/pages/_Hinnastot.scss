@@ -24,7 +24,7 @@
 		white-space: pre-wrap;
 
 		button {
-			margin-top: 1rem;
+			margin: 0 auto;
 			max-width: max-content;
 		}
 	}
@@ -37,7 +37,6 @@
 		grid-template-columns: repeat(2, 1fr);
 
 		.leftSide {
-			// grid-auto-flow: row;
 			grid-auto-columns: $itemWidth;
 			grid-template-rows: repeat(auto-fit, $itemHeight);
 		}
@@ -45,6 +44,8 @@
 		.rightSide {
 			grid-auto-columns: $itemWidth;
 			grid-template-rows: $itemHeight $itemHeight max-content max-content;
+
+			button { margin: 0; }
 		}
 	}
 }

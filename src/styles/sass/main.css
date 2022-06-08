@@ -176,7 +176,7 @@ footer .icons a {
   white-space: pre-wrap;
 }
 .Hinnastot .rightSide button {
-  margin-top: 1rem;
+  margin: 0 auto;
   max-width: max-content;
 }
 @media (min-width: 45rem) {
@@ -191,6 +191,9 @@ footer .icons a {
   .Hinnastot .rightSide {
     grid-auto-columns: min(100%, 30rem);
     grid-template-rows: 7rem 7rem max-content max-content;
+  }
+  .Hinnastot .rightSide button {
+    margin: 0;
   }
 }
 
