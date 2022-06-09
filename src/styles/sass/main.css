@@ -6,8 +6,8 @@
   color: #fff;
 }
 
-p {
-  line-height: 1.5;
+p, span, h1, h2, h3, h4, h5 {
+  line-height: 1.2;
   letter-spacing: 0.00938em;
 }
 
@@ -17,23 +17,6 @@ a {
 
 ul {
   list-style: none;
-}
-
-button {
-  padding-block: 0.75rem;
-  padding-inline: 1rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 0.06rem 0.19rem rgba(0, 0, 0, 0.12), 0 0.06rem 0.125rem rgba(0, 0, 0, 0.24);
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: black;
-}
-button:hover {
-  background-color: #050505;
 }
 
 header {
@@ -58,6 +41,19 @@ header nav {
 header .MenuButton {
   box-shadow: none;
   width: 5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+}
+header .MenuButton:hover {
+  background-color: #050505;
 }
 header .MenuButton svg {
   width: 2.5rem;
@@ -115,6 +111,15 @@ footer .icons {
 }
 footer .icons a {
   cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+footer .icons a :hover {
+  color: #fff500;
+}
+footer .icons a p {
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 47rem) {
   footer {
@@ -180,8 +185,17 @@ footer .icons a {
   white-space: pre-wrap;
 }
 .Hinnasto .rightSide button {
+  background-color: black;
+  text-transform: none;
+  border-radius: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
   margin: 0 auto;
   max-width: max-content;
+}
+.Hinnasto .rightSide button:hover {
+  background-color: #050505;
 }
 @media (min-width: 47rem) {
   .Hinnasto {

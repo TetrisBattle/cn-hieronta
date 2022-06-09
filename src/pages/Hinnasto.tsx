@@ -1,3 +1,5 @@
+import { Button } from '@mui/material'
+
 interface IList {
 	props: {
 		title: string
@@ -80,7 +82,7 @@ export default function Hinnastot() {
 					<br />
 					<p>Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.</p>
 				</div>
-				<button>Varaa aika tästä</button>
+				<Button variant='contained'>Varaa aika tästä</Button>
 			</div>
 		</main>
 	)

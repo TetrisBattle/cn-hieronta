@@ -19,11 +19,12 @@ export default function Footer() {
 			<p>{info.phoneNumber}</p>
 
 			<div className='icons'>
-				<a href="https://www.facebook.com/camtu.nguyen.184007">
+				{/* <a href="https://www.facebook.com/camtu.nguyen.184007">
 					<Facebook />
-				</a>
+				</a> */}
 				<a href="https://www.facebook.com/camtu.nguyen.184007">
 					<img src={Instagram} width={24} alt="Instagram" />
+					<p>@CNhierontapalvelut</p>
 				</a>
 			</div>
 		</footer>
