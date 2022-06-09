@@ -34,7 +34,8 @@
 		$itemHeight: 7rem;
 		$itemWidth: min(100%, 30rem);
 
-		padding: 2rem;
+		padding-top: 4rem;
+		padding-inline: 2rem;
 		grid-template-columns: repeat(2, 1fr);
 
 		.leftSide {
