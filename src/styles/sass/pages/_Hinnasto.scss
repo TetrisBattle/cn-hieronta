@@ -1,5 +1,6 @@
 .Hinnasto {
 	padding: 1rem 2rem;
+	justify-content: center;
 
 	&.grid, .grid {
 		display: grid;
@@ -37,11 +38,13 @@
 		grid-template-columns: repeat(2, 1fr);
 
 		.leftSide {
+			margin: 0 auto;
 			grid-auto-columns: $itemWidth;
 			grid-template-rows: repeat(auto-fit, $itemHeight);
 		}
 
 		.rightSide {
+			margin: 0 auto;
 			grid-auto-columns: $itemWidth;
 			grid-template-rows: $itemHeight $itemHeight max-content max-content;
 

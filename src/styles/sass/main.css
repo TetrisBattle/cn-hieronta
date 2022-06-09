@@ -156,6 +156,7 @@ footer .icons a {
 
 .Hinnasto {
   padding: 1rem 2rem;
+  justify-content: center;
 }
 .Hinnasto.grid, .Hinnasto .grid {
   display: grid;
@@ -185,10 +186,12 @@ footer .icons a {
     grid-template-columns: repeat(2, 1fr);
   }
   .Hinnasto .leftSide {
+    margin: 0 auto;
     grid-auto-columns: min(100%, 30rem);
     grid-template-rows: repeat(auto-fit, 7rem);
   }
   .Hinnasto .rightSide {
+    margin: 0 auto;
     grid-auto-columns: min(100%, 30rem);
     grid-template-rows: 7rem 7rem max-content max-content;
   }
