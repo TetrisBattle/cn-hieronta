@@ -15,6 +15,7 @@ export default function MuiMenu ({ children }) {
 			<Menu
 				anchorEl={anchorEl}
 				open={!!anchorEl}
+				onClick={handleClose}
 				onClose={handleClose}
 			>{children}</Menu>
 		</>
