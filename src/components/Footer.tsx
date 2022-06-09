@@ -3,7 +3,7 @@ import Instagram from 'images/Instagram.png'
 
 export default function Footer() {
 	const info = {
-		title: 'Hierontapiste',
+		title: 'CN Hierontapalvelut',
 		address: {
 			street: 'Kauppurienkatu 10',
 			city: 'Oulu',

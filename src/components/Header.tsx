@@ -19,11 +19,11 @@ export default function Header() {
 
 	return (
 		<header>
-			<h1>Hierontapiste</h1>
+			<h1>CN Hierontapalvelut</h1>
 
 			<nav>
 				<NavLink page='Etusivu' />
-				<NavLink page='Hinnastot' />
+				<NavLink page='Hinnasto' />
 			</nav>
 
 			<MuiMenu>
@@ -31,7 +31,7 @@ export default function Header() {
 					<NavLink page='Etusivu' />
 				</MenuItem>
 				<MenuItem>
-					<NavLink page='Hinnastot' />
+					<NavLink page='Hinnasto' />
 				</MenuItem>
 			</MuiMenu>
 		</header>

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Header from 'components/Header'
 import Etusivu from 'pages/Etusivu'
-import Hinnastot from 'pages/Hinnastot'
+import Hinnasto from 'pages/Hinnasto'
 import Footer from 'components/Footer'
 import 'styles/sass/main.css'
 
@@ -12,7 +12,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<Navigate replace to="/Etusivu" />} />
 					<Route path='/Etusivu' element={<Etusivu />} />
-					<Route path='/Hinnastot' element={<Hinnastot />} />
+					<Route path='/Hinnasto' element={<Hinnasto />} />
 				</Routes>
 			<Footer />
 		</Router>

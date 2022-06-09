@@ -63,7 +63,7 @@ header .MenuButton svg {
   width: 2.5rem;
   height: 2.5rem;
 }
-@media (min-width: 45rem) {
+@media (min-width: 47rem) {
   header h1 {
     margin-left: 2rem;
   }
@@ -116,7 +116,7 @@ footer .icons {
 footer .icons a {
   cursor: pointer;
 }
-@media (min-width: 45rem) {
+@media (min-width: 47rem) {
   footer {
     flex-direction: row;
   }
@@ -140,7 +140,7 @@ footer .icons a {
   flex-direction: column;
   gap: 1rem;
 }
-@media (min-width: 45rem) {
+@media (min-width: 47rem) {
   .Etusivu {
     display: flex;
     gap: 2rem;
@@ -154,45 +154,45 @@ footer .icons a {
   }
 }
 
-.Hinnastot {
+.Hinnasto {
   padding: 1rem 2rem;
 }
-.Hinnastot.grid, .Hinnastot .grid {
+.Hinnasto.grid, .Hinnasto .grid {
   display: grid;
   gap: 2rem;
 }
-.Hinnastot .leftSide ul {
+.Hinnasto .leftSide ul {
   list-style-type: unset;
   padding-left: 1.25rem;
 }
-.Hinnastot h2 {
+.Hinnasto h2 {
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
 }
-.Hinnastot p, .Hinnastot li {
+.Hinnasto p, .Hinnasto li {
   color: #E0E0E0;
 }
-.Hinnastot .rightSide {
+.Hinnasto .rightSide {
   white-space: pre-wrap;
 }
-.Hinnastot .rightSide button {
+.Hinnasto .rightSide button {
   margin: 0 auto;
   max-width: max-content;
 }
-@media (min-width: 45rem) {
-  .Hinnastot {
+@media (min-width: 47rem) {
+  .Hinnasto {
     padding: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
-  .Hinnastot .leftSide {
+  .Hinnasto .leftSide {
     grid-auto-columns: min(100%, 30rem);
     grid-template-rows: repeat(auto-fit, 7rem);
   }
-  .Hinnastot .rightSide {
+  .Hinnasto .rightSide {
     grid-auto-columns: min(100%, 30rem);
     grid-template-rows: 7rem 7rem max-content max-content;
   }
-  .Hinnastot .rightSide button {
+  .Hinnasto .rightSide button {
     margin: 0;
   }
 }

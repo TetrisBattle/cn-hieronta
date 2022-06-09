@@ -1,16 +1,15 @@
 interface IList {
 	props: {
-		className?: string
 		title: string
 		items: string[]
 	}
 }
 
 const List = ({ props }: IList) => {
-	const { className, title, items } = props
+	const { title, items } = props
 
 	return (
-		<div className={className}>
+		<div>
 			<h2>{title}</h2>
 			<ul>
 				{items.map((item) => (
@@ -53,18 +52,16 @@ export default function Hinnastot() {
 
 	const hinnasto1 = {
 		title: 'Klassinen- /urheiluhieronta',
-		items: ['30min\t77e', '60min\t90e', '90min\t12e', '120min\t15e'],
-		className: 'hinnasto',
+		items: ['30min\t77e', '60min\t90e', '90min\t12e', '120min\t15e']
 	}
 
 	const hinnasto2 = {
 		title: 'Purentalihastenhieronta',
-		items: [`30min\t78e`, `60min\t91e`, `90min\t13e`],
-		className: 'hinnasto',
+		items: [`30min\t78e`, `60min\t91e`, `90min\t13e`]
 	}
 
 	return (
-		<main className='Hinnastot grid'>
+		<main className='Hinnasto grid'>
 			<div className='leftSide grid'>
 				<List props={klassinenHieronta} />
 				<List props={urheiluhieronta} />
