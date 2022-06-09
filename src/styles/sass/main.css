@@ -149,7 +149,10 @@ footer .icons a {
     width: 50%;
     margin: unset;
   }
-  .Etusivu p {
+  .Etusivu section {
+    max-width: 59rem;
+  }
+  .Etusivu section p {
     font-size: 1.25rem;
   }
 }
