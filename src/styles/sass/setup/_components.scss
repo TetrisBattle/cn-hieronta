@@ -1,3 +1,22 @@
+button {
+	$colorButton: black;
+	padding-block: .75rem;
+	padding-inline: 1rem;
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	box-shadow: (
+		0 .06rem .19rem rgba(0, 0, 0, 0.12),
+		0 .06rem 0.125rem rgba(0, 0, 0, 0.24)
+	);
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: $colorText;
+	background-color: $colorButton;
+	&:hover { background-color: lighten($colorButton, 2%); }
+}
+
 header {
 	height: $headerHeight;
 	display: flex;
@@ -9,7 +28,7 @@ header {
 	);
 
 	h1 {
-		font-size: 2.5rem;
+		font-size: clamp(1rem, 7vw, 2.5rem);
 		margin-left: 1rem;
 		flex: 1;
 
@@ -25,21 +44,8 @@ header {
 	nav { display: none; }
 
 	.MenuButton {
-		$colorButton: black;
-
 		box-shadow: none;
 		width: $headerHeight;
-		padding-block: .75rem;
-		padding-inline: 1rem;
-		border: none;
-		border-radius: 2rem;
-		cursor: pointer;
-		transition: all .2s ease-in-out;
-		font-size: 1.25rem;
-		font-weight: bold;
-		color: $colorText;
-		background-color: $colorButton;
-		&:hover { background-color: lighten($colorButton, 2%); }
 
 		svg {
 			width: 2.5rem;
@@ -110,7 +116,7 @@ footer {
 		}
 	}
 
-	@media (min-width: $breakpoint) {
+	@media (min-width: 60rem) {
 		flex-direction: row;
 	}
 }
