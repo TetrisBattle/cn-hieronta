@@ -1,16 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ThemeProvider } from '@mui/material/styles'
-import MuiTheme from 'styles/MuiTheme'
+import { StoreContextProvider } from 'StoreContext'
+import MuiThemeProvider from 'material-ui/MuiThemeProvider'
 import App from './App'
-import 'styles/sass/main.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const rootElement = ReactDOM.createRoot(
+	document.getElementById('root') as HTMLElement
+)
 
-root.render(
+rootElement.render(
 	<React.StrictMode>
-		<ThemeProvider theme={MuiTheme}>
-			<App />
-		</ThemeProvider>
+		<StoreContextProvider>
+			<MuiThemeProvider>
+				<App />
+			</MuiThemeProvider>
+		</StoreContextProvider>
 	</React.StrictMode>
 )

@@ -1,4 +1,12 @@
-import { Button } from '@mui/material'
+import {
+	Grid,
+	Button,
+	Typography,
+	List,
+	ListItem,
+	ListItemText,
+	useTheme,
+} from '@mui/material'
 
 interface IList {
 	props: {
@@ -7,22 +15,31 @@ interface IList {
 	}
 }
 
-const List = ({ props }: IList) => {
+const CustomList = ({ props }: IList) => {
 	const { title, items } = props
 
 	return (
-		<div>
-			<h2>{title}</h2>
-			<ul>
+		<Grid item xs={12}>
+			<Typography variant='h2'>{title}</Typography>
+			<List dense disablePadding>
 				{items.map((item) => (
-					<li key={item}>{item}</li>
+					<ListItem
+						key={item}
+						disableGutters
+						disablePadding
+						sx={{ display: 'list-item', listStyle: 'disc', marginLeft: 2.5 }}
+					>
+						<ListItemText>{item}</ListItemText>
+					</ListItem>
 				))}
-			</ul>
-		</div>
+			</List>
+		</Grid>
 	)
 }
 
-export default function Hinnastot() {
+export default function Pricing() {
+	const theme = useTheme()
+
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -54,36 +71,90 @@ export default function Hinnastot() {
 
 	const hinnasto1 = {
 		title: 'Klassinen- /urheiluhieronta',
-		items: ['30min\t77e', '60min\t90e', '90min\t12e', '120min\t15e']
+		items: ['30min\t30e', '60min\t47e', '90min\t65e', '120min\t82e'],
 	}
 
 	const hinnasto2 = {
 		title: 'Purentalihastenhieronta',
-		items: [`30min\t78e`, `60min\t91e`, `90min\t13e`]
+		items: [`30min\t40e`, `60min\t60e`, `90min\t85e`],
 	}
 
 	return (
-		<main className='Hinnasto grid'>
-			<div className='leftSide grid'>
-				<List props={klassinenHieronta} />
-				<List props={urheiluhieronta} />
-				<List props={purentalihastenHieronta} />
-			</div>
+		<Grid
+			container
+			columnSpacing={4}
+			rowSpacing={2}
+			sx={{
+				'& h2.MuiTypography-root': { fontSize: '1.5rem', marginBottom: 0.5 },
+				'& .MuiTypography-root:not(h2)': { fontSize: '1rem' },
+				[theme.breakpoints.down('md')]: {
+					paddingInline: '25vw',
+					paddingBottom: 2,
+				},
+				[theme.breakpoints.down('sm')]: {
+					padding: 1,
+					paddingBottom: 2,
+				},
+				[theme.breakpoints.up('md')]: {
+					padding: 8,
+				},
+				[theme.breakpoints.up('xl')]: {
+					'& h2.MuiTypography-root': { fontSize: '1.75rem !important' },
+					'& .MuiTypography-root:not(h2)': { fontSize: '1.25rem !important' },
+				},
+			}}
+		>
+			<Grid container item xs={12} md={6} spacing={2}>
+				<CustomList props={klassinenHieronta} />
+				<CustomList props={urheiluhieronta} />
+				<CustomList props={purentalihastenHieronta} />
 
-			<div className='rightSide grid'>
-				<List props={hinnasto1} />
-				<List props={hinnasto2} />
-				<div>
-					<h2>Ajanvaraus</h2>
-					<p>
+				<Grid item xs={12}>
+					<Typography variant='h2'>Yhteystiedot</Typography>
+					<Typography>Pakkahuoneenkatu 5 B 17, 90100 Oulu, 2. krs.</Typography>
+					<Typography>Puhelinnumero: 0451420611</Typography>
+					<Typography>Sähköposti: cnhierontapalvelut@gmail.com</Typography>
+					<br />
+					<Typography>Oven avaus ovisummerilla.</Typography>
+				</Grid>
+			</Grid>
+
+			<Grid container item xs={12} md={6} spacing={2}>
+				<CustomList props={hinnasto1} />
+				<CustomList props={hinnasto2} />
+
+				<Grid item xs={12}>
+					<Typography variant='h2'>Ajanvaraus</Typography>
+					<Typography>
 						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
 						tulleesta linkinstä, soittamalla tai tekstiviestillä.
-					</p>
+					</Typography>
 					<br />
-					<p>Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.</p>
-				</div>
-				<Button variant='contained'>Varaa aika tästä</Button>
-			</div>
-		</main>
+					<Typography>
+						Jos tulet ensimmäistä kertaa paikalle, saavuthan 5 minuuttia aiemmin
+						paikalle.
+					</Typography>
+					<br />
+					<Typography>
+						Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.
+					</Typography>
+					<Typography>
+						Yrityksille ja järjestöille voidaan sopia tarjouksia s.postitse.
+					</Typography>
+				</Grid>
+
+				<Grid item xs={12}>
+					<Typography variant='h2'>Maksutavat</Typography>
+					<Typography>
+						Käteinen, korttimaksu, MobilePay, e-passi, Smartum, Easy-break,
+						edenred
+					</Typography>
+				</Grid>
+
+				<Grid item xs={12}>
+					<Button variant='contained' sx={{ borderRadius: 40 }}>Varaa aika tästä</Button>
+				</Grid>
+			</Grid>
+		</Grid>
 	)
 }
