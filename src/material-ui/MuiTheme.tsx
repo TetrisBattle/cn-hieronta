@@ -85,29 +85,6 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				defaultProps: {
 					position: 'static',
 				},
-				styleOverrides: {
-					root: {
-						'& .MuiToolbar-root': {
-							padding: 16,
-							'& .navButtons': {
-								[theme.breakpoints.down('sm')]: {
-									display: 'none',
-								},
-								'& .MuiButton-root': {
-									color: 'inherit',
-									backgroundColor: 'transparent',
-									fontSize: '1.25rem',
-								},
-							},
-							'& .menuIcon': {
-								color: 'inherit',
-								[theme.breakpoints.up('sm')]: {
-									display: 'none',
-								},
-							},
-						},
-					},
-				},
 			},
 			MuiToolbar: {
 				defaultProps: {
@@ -116,43 +93,6 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				styleOverrides: {
 					root: {
 						minHeight: 'unset !important',
-					},
-				},
-			},
-			MuiDialog: {
-				defaultProps: {
-					fullWidth: true,
-					maxWidth: 'sm',
-				},
-			},
-			MuiDialogTitle: {
-				styleOverrides: {
-					root: {
-						display: 'flex',
-						justifyContent: 'space-between',
-						alignItems: 'center',
-						backgroundColor: theme.palette.primary.main,
-						color: theme.palette.primary.contrastText,
-						fontWeight: 'bold',
-						padding: '8px 8px 8px 16px',
-						cursor: 'grab',
-						'& .MuiIconButton-root': {
-							color: 'inherit',
-						},
-					},
-				},
-			},
-			MuiDialogContent: {
-				styleOverrides: {
-					root: {
-						padding: '16px !important',
-					},
-				},
-			},
-			MuiDialogActions: {
-				styleOverrides: {
-					root: {
-						padding: '16px',
 					},
 				},
 			},

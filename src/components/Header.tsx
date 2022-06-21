@@ -1,59 +1,51 @@
 import { Link } from 'react-router-dom'
-import {
-	AppBar,
-	Toolbar,
-	Button,
-	MenuItem,
-	Typography,
-	Box,
-	useTheme,
-} from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
-import MenuButton from './MenuButton'
+import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material'
 
 export default function Header() {
-	const theme = useTheme()
 	const pages = ['Etusivu', 'Hinnasto']
 
 	return (
 		<AppBar
 			sx={{
 				backgroundImage: 'unset',
-				backgroundColor: theme.palette.primary.main,
+				backgroundColor: '#121212',
 			}}
 		>
-			<Toolbar>
-				<Typography
-					variant='h1'
-					sx={{
-						flexGrow: 1,
-						fontSize: '1.75rem',
-						fontWeight: 600,
-						[theme.breakpoints.up('sm')]: {
-							fontSize: '2.25rem',
-						},
-						[theme.breakpoints.up('lg')]: {
-							fontSize: '3rem',
-						},
-					}}
-				>
-					CN Hierontapalvelut
-				</Typography>
-				<Box className='navButtons'>
+			<Toolbar sx={{ p: 2 }}>
+				<Box className='navButtons' sx={{ ml: 'auto', pr: 2 }}>
 					{pages.map((page) => (
-						<Button key={page} component={Link} to={`/${page}`} variant='text'>
+						<Button
+							key={page}
+							component={Link}
+							to={`/${page}`}
+							variant='text'
+							disableRipple
+							sx={{
+								color: 'inherit',
+								backgroundColor: 'transparent',
+								fontSize: '1.375rem',
+							}}
+						>
 							{page}
 						</Button>
 					))}
 				</Box>
-				<MenuButton icon={<MenuIcon />} className='menuIcon'>
-					{pages.map((page) => (
-						<MenuItem key={page} component={Link} to={`/${page}`}>
-							{page}
-						</MenuItem>
-					))}
-				</MenuButton>
 			</Toolbar>
+			<Typography
+				variant='h1'
+				sx={{
+					bgcolor: '#fff',
+					color: 'black',
+					p: 2.5,
+					textAlign: 'center',
+					fontSize: 'clamp(1.75rem, 5.3vw, 3.5rem)',
+					fontWeight: 700,
+					fontFamily: 'Cinzel Decorative',
+					wordSpacing: '1ch',
+				}}
+			>
+				CN Hierontapalvelut
+			</Typography>
 		</AppBar>
 	)
 }

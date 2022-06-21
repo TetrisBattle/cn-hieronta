@@ -24,6 +24,9 @@ export default function RootWrapper({ children }: IProps) {
 				display: 'flex',
 				flexDirection: 'column',
 				color: theme.palette.text.primary,
+				'& img': {
+					objectFit: 'cover'
+				}
 			}}
 		>
 			<Header />

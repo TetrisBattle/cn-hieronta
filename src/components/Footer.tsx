@@ -20,7 +20,7 @@ export default function Footer() {
 			container
 			component={'footer'}
 			sx={{
-				backgroundColor: theme.palette.primary.main,
+				backgroundColor: '#121212',
 				marginTop: 'auto',
 				color: theme.palette.text.primary,
 				padding: 1,
