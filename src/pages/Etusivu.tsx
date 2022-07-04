@@ -10,6 +10,9 @@ export default function Home() {
 			sx={{
 				justifyContent: 'space-evenly',
 				paddingTop: 3,
+				'& .MuiTypography-root': {
+					fontWeight: 600,
+				},
 				[theme.breakpoints.up('sm')]: {
 					paddingBlock: 4,
 					paddingInline: 1,

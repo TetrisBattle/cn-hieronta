@@ -5,7 +5,6 @@ import {
 	List,
 	ListItem,
 	ListItemText,
-	useTheme,
 } from '@mui/material'
 
 interface IList {
@@ -38,8 +37,6 @@ const CustomList = ({ props }: IList) => {
 }
 
 export default function Pricing() {
-	const theme = useTheme()
-
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -91,23 +88,26 @@ export default function Pricing() {
 			columnSpacing={4}
 			rowSpacing={2}
 			sx={{
-				'& h2.MuiTypography-root': { fontSize: '1.5rem', marginBottom: 0.5 },
-				'& .MuiTypography-root:not(h2)': { fontSize: '1rem' },
-				[theme.breakpoints.down('md')]: {
-					pt: 1,
-					px: '25vw',
-					pb: 2,
+				'& .MuiTypography-root': {
+					fontWeight: 600,
 				},
-				[theme.breakpoints.down('sm')]: {
-					p: 1,
-					pb: 2,
+				'& h2.MuiTypography-root': {
+					marginBottom: 0.5,
+					fontSize: {
+						xs: '1.5rem',
+						xl: '1.75rem',
+					},
 				},
-				[theme.breakpoints.up('md')]: {
-					p: 8,
+				'& .MuiTypography-root:not(h2)': {
+					fontSize: {
+						xs: '1rem',
+						xl: '1.25rem',
+					},
 				},
-				[theme.breakpoints.up('xl')]: {
-					'& h2.MuiTypography-root': { fontSize: '1.75rem !important' },
-					'& .MuiTypography-root:not(h2)': { fontSize: '1.25rem !important' },
+				p: {
+					xs: '8px 8px 16pc 8px',
+					sm: '8px 25vw 16px 25vw',
+					md: 8,
 				},
 			}}
 		>
@@ -166,12 +166,17 @@ export default function Pricing() {
 
 				<Grid item xs={12}>
 					<Button
-						variant='contained'
+						variant='outlined'
 						href='https://vello.fi/cn-hierontapalvelut/'
 						target='_blank'
-						sx={{ borderRadius: 40 }}
+						sx={{
+							borderRadius: 40,
+							borderWidth: '4px !important',
+							borderColor: '#333',
+							fontSize: '1.25rem',
+						}}
 					>
-						Varaa aika tästä
+						Tästä ajanvaraukseen
 					</Button>
 				</Grid>
 			</Grid>

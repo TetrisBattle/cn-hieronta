@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material'
+import { AppBar, Toolbar, Button, Box } from '@mui/material'
 import Logo from 'images/Logo.png'
 
 export default function Header() {
@@ -8,28 +8,24 @@ export default function Header() {
 	return (
 		<AppBar
 			sx={{
-				backgroundImage: 'unset',
-				backgroundColor: '#fff',
-				color: '#000',
+				bgcolor: 'unset',
 				boxShadow: 'none',
 			}}
 		>
-			<Box px={'30vw'}>
-				<img src={Logo} alt="CN hierontapalvelut" width='100%' />
+			<Box sx={{
+				mx: 'auto',
+				'& img': {
+					width: {
+						xs: 320,
+						sm: 400,
+						md: 500,
+						lg: 600,
+						xl: 700,
+					}
+				}
+			}}>
+				<img src={Logo} alt="CN hierontapalvelut" />
 			</Box>
-			{/* <Typography
-				variant='h1'
-				sx={{
-					p: 2.5,
-					textAlign: 'center',
-					fontSize: 'clamp(1.75rem, 5.3vw, 6rem)',
-					fontWeight: 700,
-					fontFamily: 'Cinzel Decorative',
-					wordSpacing: '1ch',
-				}}
-			>
-				CN Hierontapalvelut
-			</Typography> */}
 			<Toolbar sx={{
 				borderTop: 'solid black 1px',
 				borderBottom: 'solid black 1px',
@@ -40,8 +36,11 @@ export default function Header() {
 					display: 'flex',
 					gap: 3,
 					'& .MuiButton-root': {
-						xs: { 	fontSize: '1rem' },
-						sm: { fontSize: '1.25rem' },
+						fontSize: {
+							xs: '1rem',
+							sm: '1.25rem',
+							xl: '1.5rem',
+						},
 					}
 				}}>
 					{pages.map((page) => (
@@ -50,14 +49,12 @@ export default function Header() {
 							component={Link}
 							to={`/${page}`}
 							variant='text'
-							disableRipple
 						>
 							{page}
 						</Button>
 					))}
 					<Button
 						variant='text'
-						disableRipple
 						href='https://vello.fi/cn-hierontapalvelut/'
 						target='_blank'
 					>

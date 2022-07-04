@@ -22,7 +22,7 @@ export default function Footer() {
 			sx={{
 				backgroundColor: '#292929',
 				marginTop: 'auto',
-				color: theme.palette.text.primary,
+				color: 'white',
 				padding: 1,
 				justifyContent: 'space-evenly',
 				'& .MuiTypography-root': {

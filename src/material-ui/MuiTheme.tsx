@@ -37,8 +37,7 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				: {
 						mode: 'light',
 						primary: {
-							main: '#FFD700',
-							contrastText: '#333',
+							main: '#000',
 						},
 				  }),
 		},

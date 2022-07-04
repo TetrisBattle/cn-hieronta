@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 export default class AppStore {
-	private _isDarkTheme = true
+	private _isDarkTheme = false
 	private _isLoading = false
 
 	constructor() {
