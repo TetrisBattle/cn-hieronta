@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material'
 import Logo from 'images/Logo.png'
 
 export default function Header() {
-	const pages = ['Etusivu', 'Hinnasto', 'Varaa aika']
+	const pages = ['Etusivu', 'Hinnasto']
 
 	return (
 		<AppBar
@@ -30,7 +30,14 @@ export default function Header() {
 				CN Hierontapalvelut
 			</Typography> */}
 			<Toolbar sx={{ borderTop: 'solid black 4px', display: 'flex', justifyContent: 'center' }}>
-				<Box className='navButtons' sx={{ display: 'flex', gap: 3 }}>
+				<Box sx={{
+					display: 'flex',
+					gap: 3,
+					'& .MuiButton-root': {
+						xs: { 	fontSize: '1rem' },
+						sm: { fontSize: '1.25rem' },
+					}
+				}}>
 					{pages.map((page) => (
 						<Button
 							key={page}
@@ -38,14 +45,18 @@ export default function Header() {
 							to={`/${page}`}
 							variant='text'
 							disableRipple
-							sx={{
-								backgroundColor: 'transparent',
-								fontSize: '1.75rem',
-							}}
 						>
 							{page}
 						</Button>
 					))}
+					<Button
+						variant='text'
+						disableRipple
+						href='https://vello.fi/cn-hierontapalvelut/'
+						target='_blank'
+					>
+						Varaa aika
+					</Button>
 				</Box>
 			</Toolbar>
 		</AppBar>

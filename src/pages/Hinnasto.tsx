@@ -71,7 +71,13 @@ export default function Pricing() {
 
 	const hinnasto1 = {
 		title: 'Klassinen- /urheiluhieronta',
-		items: ['30min\t30e', '40min\t40e', '60min\t47e', '90min\t65e', '120min\t85e'],
+		items: [
+			'30min\t30e',
+			'40min\t40e',
+			'60min\t47e',
+			'90min\t65e',
+			'120min\t85e',
+		],
 	}
 
 	const hinnasto2 = {
@@ -88,15 +94,16 @@ export default function Pricing() {
 				'& h2.MuiTypography-root': { fontSize: '1.5rem', marginBottom: 0.5 },
 				'& .MuiTypography-root:not(h2)': { fontSize: '1rem' },
 				[theme.breakpoints.down('md')]: {
-					paddingInline: '25vw',
-					paddingBottom: 2,
+					pt: 1,
+					px: '25vw',
+					pb: 2,
 				},
 				[theme.breakpoints.down('sm')]: {
-					padding: 1,
-					paddingBottom: 2,
+					p: 1,
+					pb: 2,
 				},
 				[theme.breakpoints.up('md')]: {
-					padding: 8,
+					p: 8,
 				},
 				[theme.breakpoints.up('xl')]: {
 					'& h2.MuiTypography-root': { fontSize: '1.75rem !important' },
@@ -126,9 +133,9 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
 					<Typography>
-						Akuuteissa tapauksissa kalenterin ulkopuolelle soittamalla.
-						Hieron lähtökohtaisesti 30min mutta maksimissaan 60min,
-						josta perin 5e lisän.
+						Akuuteissa tapauksissa kalenterin ulkopuolelle soittamalla. Hieron
+						lähtökohtaisesti 30min mutta maksimissaan 60min, josta perin 5e
+						lisän.
 					</Typography>
 					<br />
 					<Typography>
@@ -158,7 +165,14 @@ export default function Pricing() {
 				</Grid>
 
 				<Grid item xs={12}>
-					<Button variant='contained' sx={{ borderRadius: 40 }}>Varaa aika tästä</Button>
+					<Button
+						variant='contained'
+						href='https://vello.fi/cn-hierontapalvelut/'
+						target='_blank'
+						sx={{ borderRadius: 40 }}
+					>
+						Varaa aika tästä
+					</Button>
 				</Grid>
 			</Grid>
 		</Grid>
