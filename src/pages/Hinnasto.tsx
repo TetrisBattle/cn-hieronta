@@ -71,7 +71,7 @@ export default function Pricing() {
 
 	const hinnasto1 = {
 		title: 'Klassinen- /urheiluhieronta',
-		items: ['30min\t30e', '60min\t47e', '90min\t65e', '120min\t82e'],
+		items: ['30min\t30e', '40min\t40e', '60min\t47e', '90min\t65e', '120min\t85e'],
 	}
 
 	const hinnasto2 = {
@@ -126,6 +126,12 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
 					<Typography>
+						Akuuteissa tapauksissa kalenterin ulkopuolelle soittamalla.
+						Hieron lähtökohtaisesti 30min mutta maksimissaan 60min,
+						josta perin 5e lisän.
+					</Typography>
+					<br />
+					<Typography>
 						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
 						tulleesta linkinstä, soittamalla tai tekstiviestillä.
 					</Typography>
@@ -139,7 +145,7 @@ export default function Pricing() {
 						Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.
 					</Typography>
 					<Typography>
-						Yrityksille ja järjestöille voidaan sopia tarjouksia s.postitse.
+						Yrityksille ja järjestöille voidaan sopia tarjouksia sähköpostitse.
 					</Typography>
 				</Grid>
 
