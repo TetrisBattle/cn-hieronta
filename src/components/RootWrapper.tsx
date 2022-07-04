@@ -17,13 +17,15 @@ export default function RootWrapper({ children }: IProps) {
 		<Box
 			sx={{
 				// bgcolor: theme.palette.background.default,
-				background: isDarkTheme
-					? 'linear-gradient(135deg, #777, #222)'
-					: `linear-gradient(135deg, #fff, #f5ecb8)`,
+				// background: isDarkTheme
+				// 	? 'linear-gradient(135deg, #eee, #ddd)'
+				// 	: `linear-gradient(135deg, #fff, #f5ecb8)`,
+				backgroundColor: '#fff',
 				minHeight: '100vh',
 				display: 'flex',
 				flexDirection: 'column',
-				color: theme.palette.text.primary,
+				// color: theme.palette.text.primary,
+				color: 'black',
 				'& img': {
 					objectFit: 'cover'
 				}

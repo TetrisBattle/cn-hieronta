@@ -10,7 +10,8 @@ export default function Header() {
 			sx={{
 				backgroundImage: 'unset',
 				backgroundColor: '#fff',
-				color: '#000'
+				color: '#000',
+				boxShadow: 'none',
 			}}
 		>
 			<Box px={'30vw'}>
@@ -29,7 +30,12 @@ export default function Header() {
 			>
 				CN Hierontapalvelut
 			</Typography> */}
-			<Toolbar sx={{ borderTop: 'solid black 4px', display: 'flex', justifyContent: 'center' }}>
+			<Toolbar sx={{
+				borderTop: 'solid black 1px',
+				borderBottom: 'solid black 1px',
+				display: 'flex',
+				justifyContent: 'center'
+			}}>
 				<Box sx={{
 					display: 'flex',
 					gap: 3,
