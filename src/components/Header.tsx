@@ -24,43 +24,39 @@ export default function Header() {
 					}
 				}
 			}}>
-				<img src={Logo} alt="CN hierontapalvelut" />
+				<img src={Logo} alt="CN hierontapalvelut" loading='lazy' />
 			</Box>
 			<Toolbar sx={{
 				borderTop: 'solid black 1px',
 				borderBottom: 'solid black 1px',
 				display: 'flex',
-				justifyContent: 'center'
+				justifyContent: 'center',
+				gap: 3,
+				'& .MuiButton-root': {
+					fontSize: {
+						xs: '1rem',
+						sm: '1.25rem',
+						xl: '1.5rem',
+					},
+				},
 			}}>
-				<Box sx={{
-					display: 'flex',
-					gap: 3,
-					'& .MuiButton-root': {
-						fontSize: {
-							xs: '1rem',
-							sm: '1.25rem',
-							xl: '1.5rem',
-						},
-					}
-				}}>
-					{pages.map((page) => (
-						<Button
-							key={page}
-							component={Link}
-							to={`/${page}`}
-							variant='text'
-						>
-							{page}
-						</Button>
-					))}
+				{pages.map((page) => (
 					<Button
+						key={page}
+						component={Link}
+						to={`/${page}`}
 						variant='text'
-						href='https://vello.fi/cn-hierontapalvelut/'
-						target='_blank'
 					>
-						Varaa aika
+						{page}
 					</Button>
-				</Box>
+				))}
+				<Button
+					variant='text'
+					href='https://vello.fi/cn-hierontapalvelut/'
+					target='_blank'
+				>
+					Varaa aika
+				</Button>
 			</Toolbar>
 		</AppBar>
 	)
