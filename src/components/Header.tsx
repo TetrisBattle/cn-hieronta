@@ -13,7 +13,7 @@ export default function Header() {
 				color: '#000'
 			}}
 		>
-			<Box px={80}>
+			<Box px={'30vw'}>
 				<img src={Logo} alt="CN hierontapalvelut" width='100%' />
 			</Box>
 			{/* <Typography
