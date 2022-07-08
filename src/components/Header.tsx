@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { AppBar, Toolbar, Button, Box } from '@mui/material'
-import Logo from 'images/Logo.png'
+import CnHierontapalvelut from 'images/CnHierontapalvelut.png'
 
 export default function Header() {
 	const pages = ['Etusivu', 'Hinnasto']
@@ -24,7 +24,7 @@ export default function Header() {
 					}
 				}
 			}}>
-				<img src={Logo} alt="CN hierontapalvelut" loading='lazy' />
+				<img src={CnHierontapalvelut} alt="CN hierontapalvelut" loading='lazy' />
 			</Box>
 			<Toolbar sx={{
 				borderTop: 'solid black 1px',
