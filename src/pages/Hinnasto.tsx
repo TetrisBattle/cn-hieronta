@@ -167,7 +167,7 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Button
 						variant='outlined'
-						href='https://vello.fi/cn-hierontapalvelut/'
+						href='https://nettivaraus6.ajas.fi/fi/40fbe618086c'
 						target='_blank'
 						sx={{
 							borderRadius: 40,
