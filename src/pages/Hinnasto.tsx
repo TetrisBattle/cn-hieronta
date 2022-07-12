@@ -133,7 +133,7 @@ export default function Pricing() {
 					<br />
 					<Typography>
 						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
-						tulleesta linkinstä, soittamalla tai tekstiviestillä.
+						tulleesta linkistä, soittamalla tai tekstiviestillä.
 					</Typography>
 					<br />
 					<Typography>
