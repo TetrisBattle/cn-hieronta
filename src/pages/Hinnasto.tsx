@@ -67,19 +67,13 @@ export default function Pricing() {
 	}
 
 	const hinnasto1 = {
-		title: 'Klassinen- /urheiluhieronta',
+		title: 'Hinnat',
 		items: [
-			'30min\t30e',
-			'40min\t40e',
-			'60min\t47e',
-			'90min\t65e',
-			'120min\t85e',
+			'20min\t21e',
+			'50min\t43e',
+			'80min\t61e',
+			'110min\t82e',
 		],
-	}
-
-	const hinnasto2 = {
-		title: 'Purentalihastenhieronta',
-		items: [`30min\t40e`, `60min\t60e`, `90min\t85e`],
 	}
 
 	return (
@@ -128,7 +122,6 @@ export default function Pricing() {
 
 			<Grid container item xs={12} md={6} spacing={2}>
 				<CustomList props={hinnasto1} />
-				<CustomList props={hinnasto2} />
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
