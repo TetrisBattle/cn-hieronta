@@ -52,7 +52,7 @@ export default function Header() {
 				))}
 				<Button
 					variant='text'
-					href='https://nettivaraus6.ajas.fi/fi/40fbe618086c'
+					href='https://vello.fi/cnhierontapalvelut'
 					target='_blank'
 				>
 					Varaa aika
