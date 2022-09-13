@@ -126,12 +126,6 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
 					<Typography>
-						Akuuteissa tapauksissa kalenterin ulkopuolelle soittamalla. Hieron
-						lähtökohtaisesti 30min mutta maksimissaan 60min, josta perin 5e
-						lisän.
-					</Typography>
-					<br />
-					<Typography>
 						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
 						tulleesta linkistä, soittamalla tai tekstiviestillä.
 					</Typography>
@@ -152,8 +146,8 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Typography variant='h2'>Maksutavat</Typography>
 					<Typography>
-						Käteinen, korttimaksu, MobilePay, e-passi, Smartum, Easy-break,
-						edenred
+						Käteinen, korttimaksu, MobilePay, Epassi, Smartum, Eazybreak,
+						Edenred
 					</Typography>
 				</Grid>
 
