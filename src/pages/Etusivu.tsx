@@ -1,8 +1,10 @@
 import { Grid, Typography, useTheme } from '@mui/material'
 import CamTuImg from 'images/CamTu.jpeg'
+import { getAge } from 'utility/age'
 
 export default function Home() {
 	const theme = useTheme()
+	const age = getAge(new Date('1997-08-26'))
 
 	return (
 		<Grid
@@ -40,7 +42,7 @@ export default function Home() {
 				xl={5}
 				sx={{ padding: 2, gap: 2, display: 'flex', flexDirection: 'column' }}
 			>
-				<Typography>Minun nimeni on CamTu Nguyen. Olen 24-vuotias.</Typography>
+				<Typography>Minun nimeni on CamTu Nguyen. Olen {age}-vuotias.</Typography>
 				<Typography>
 					Aiemmalta ammatiltani olen lähihoitaja, 2021 kävin kuntosalivalmennus
 					kurssin, sekä valmistuin Suomen hierojakoulusta koulutetuksi
