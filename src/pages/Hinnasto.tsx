@@ -66,14 +66,14 @@ export default function Pricing() {
 		],
 	}
 
-	const hinnasto1 = {
+	const nykyinenHinnasto = {
 		title: 'Hinnat',
-		items: [
-			'20min\t21e',
-			'50min\t43e',
-			'80min\t61e',
-			'110min\t82e',
-		],
+		items: ['20min\t21e', '50min\t43e', '80min\t61e', '110min\t82e'],
+	}
+
+	const tulevaHinnasto = {
+		title: 'Hinnan muutos 1.4.2023 lähtien',
+		items: ['20min\t23e', '50min\t45e', '80min\t63e', '110min\t84e'],
 	}
 
 	return (
@@ -121,7 +121,8 @@ export default function Pricing() {
 			</Grid>
 
 			<Grid container item xs={12} md={6} spacing={2}>
-				<CustomList props={hinnasto1} />
+				<CustomList props={nykyinenHinnasto} />
+				<CustomList props={tulevaHinnasto} />
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>

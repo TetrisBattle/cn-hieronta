@@ -1,5 +1,5 @@
 import { Grid, Typography, useTheme } from '@mui/material'
-import CamTuImg from 'images/CamTu.jpeg'
+import CamTuImg from 'images/CamTu2.jpeg'
 import { getAge } from 'utility/age'
 
 export default function Home() {
