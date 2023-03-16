@@ -7,16 +7,12 @@ import {
 	ListItemText,
 } from '@mui/material'
 
-interface IList {
-	props: {
-		title: string
-		items: string[]
-	}
+interface CustomListProps {
+	title: string
+	items: string[]
 }
 
-const CustomList = ({ props }: IList) => {
-	const { title, items } = props
-
+const CustomList = ({ title, items }: CustomListProps) => {
 	return (
 		<Grid item xs={12}>
 			<Typography variant='h2'>{title}</Typography>
@@ -26,7 +22,11 @@ const CustomList = ({ props }: IList) => {
 						key={item}
 						disableGutters
 						disablePadding
-						sx={{ display: 'list-item', listStyle: 'disc', marginLeft: 2.5 }}
+						sx={{
+							display: 'list-item',
+							listStyle: 'disc',
+							marginLeft: 2.5,
+						}}
 					>
 						<ListItemText>{item}</ListItemText>
 					</ListItem>
@@ -106,49 +106,55 @@ export default function Pricing() {
 			}}
 		>
 			<Grid container item xs={12} md={6} spacing={2}>
-				<CustomList props={klassinenHieronta} />
-				<CustomList props={urheiluhieronta} />
-				<CustomList props={purentalihastenHieronta} />
+				<CustomList {...klassinenHieronta} />
+				<CustomList {...urheiluhieronta} />
+				<CustomList {...purentalihastenHieronta} />
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Yhteystiedot</Typography>
-					<Typography>Pakkahuoneenkatu 5 B 17, 90100 Oulu, 2. krs.</Typography>
+					<Typography>
+						Pakkahuoneenkatu 5 B 17, 90100 Oulu, 2. krs.
+					</Typography>
 					<Typography>Puhelinnumero: 0451420611</Typography>
-					<Typography>Sähköposti: cnhierontapalvelut@gmail.com</Typography>
+					<Typography>
+						Sähköposti: cnhierontapalvelut@gmail.com
+					</Typography>
 					<br />
 					<Typography>Oven avaus ovisummerilla.</Typography>
 				</Grid>
 			</Grid>
 
 			<Grid container item xs={12} md={6} spacing={2}>
-				<CustomList props={nykyinenHinnasto} />
-				<CustomList props={tulevaHinnasto} />
+				<CustomList {...nykyinenHinnasto} />
+				<CustomList {...tulevaHinnasto} />
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
 					<Typography>
-						Esteen tullessa peru 12h ennen varattua aikaa sähköpostiisi
-						tulleesta linkistä, soittamalla tai tekstiviestillä.
+						Esteen tullessa peru 12h ennen varattua aikaa
+						sähköpostiisi tulleesta linkistä, soittamalla tai
+						tekstiviestillä.
 					</Typography>
 					<br />
 					<Typography>
-						Jos tulet ensimmäistä kertaa paikalle, saavuthan 5 minuuttia aiemmin
-						paikalle.
+						Jos tulet ensimmäistä kertaa paikalle, saavuthan 5
+						minuuttia aiemmin paikalle.
 					</Typography>
 					<br />
 					<Typography>
 						Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.
 					</Typography>
 					<Typography>
-						Yrityksille ja järjestöille voidaan sopia tarjouksia sähköpostitse.
+						Yrityksille ja järjestöille voidaan sopia tarjouksia
+						sähköpostitse.
 					</Typography>
 				</Grid>
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Maksutavat</Typography>
 					<Typography>
-						Käteinen, korttimaksu, MobilePay, Epassi, Smartum, Eazybreak,
-						Edenred
+						Käteinen, korttimaksu, MobilePay, Epassi, Smartum,
+						Eazybreak, Edenred
 					</Typography>
 				</Grid>
 

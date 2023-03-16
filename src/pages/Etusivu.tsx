@@ -33,25 +33,38 @@ export default function Home() {
 			}}
 		>
 			<Grid item xs={9} sm={5} lg={4} xl={3.4}>
-				<img src={CamTuImg} alt='Selkahieronta' width='100%' loading='lazy' />
+				<img
+					src={CamTuImg}
+					alt='Selkahieronta'
+					width='100%'
+					loading='lazy'
+				/>
 			</Grid>
 			<Grid
 				item
 				xs={12}
 				sm={6}
 				xl={5}
-				sx={{ padding: 2, gap: 2, display: 'flex', flexDirection: 'column' }}
+				sx={{
+					padding: 2,
+					gap: 2,
+					display: 'flex',
+					flexDirection: 'column',
+				}}
 			>
-				<Typography>Minun nimeni on CamTu Nguyen. Olen {age}-vuotias.</Typography>
 				<Typography>
-					Aiemmalta ammatiltani olen lähihoitaja, 2021 kävin kuntosalivalmennus
-					kurssin, sekä valmistuin Suomen hierojakoulusta koulutetuksi
-					hierojaksi.
+					Minun nimeni on CamTu Nguyen. Olen {age}-vuotias.
 				</Typography>
 				<Typography>
-					Teen klassista-, urheilu- ja purentalihasten hierontaa. Hoidossa
-					yhdistelen klassisen- ja urheiluhieronnan tekniikoita, sekä trigger-,
-					ja fasciatekniikoita. Teen myös kinesio-, lymfa- ja kovateippausta.
+					Aiemmalta ammatiltani olen lähihoitaja, 2021 kävin
+					kuntosalivalmennus kurssin, sekä valmistuin Suomen
+					hierojakoulusta koulutetuksi hierojaksi.
+				</Typography>
+				<Typography>
+					Teen klassista-, urheilu- ja purentalihasten hierontaa.
+					Hoidossa yhdistelen klassisen- ja urheiluhieronnan
+					tekniikoita, sekä trigger-, ja fasciatekniikoita. Teen myös
+					kinesio-, lymfa- ja kovateippausta.
 				</Typography>
 				<Typography>
 					Annan myös mielelläni hoidon aikana neuvoja treenaamiseen,

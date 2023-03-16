@@ -38,7 +38,7 @@ export default function Footer() {
 					},
 					[theme.breakpoints.up('xl')]: {
 						'& .MuiTypography-root': {
-							fontSize: '1.25rem'
+							fontSize: '1.25rem',
 						},
 					},
 				},
@@ -46,7 +46,8 @@ export default function Footer() {
 		>
 			<Grid item xs={12} lg={'auto'}>
 				<Typography>
-					{info.address.street}, {info.address.postCode} {info.address.city}
+					{info.address.street}, {info.address.postCode}{' '}
+					{info.address.city}
 				</Typography>
 			</Grid>
 
@@ -62,9 +63,19 @@ export default function Footer() {
 				<Link
 					href='https://www.instagram.com/CNhierontapalvelut/'
 					target='_blank'
-					sx={{ color: 'inherit', display: 'flex', gap: .5, alignItems: 'center' }}
+					sx={{
+						color: 'inherit',
+						display: 'flex',
+						gap: 0.5,
+						alignItems: 'center',
+					}}
 				>
-					<img src={Instagram} width={24} height={24} alt='Instagram' />
+					<img
+						src={Instagram}
+						width={24}
+						height={24}
+						alt='Instagram'
+					/>
 					<Typography>{info.instagram}</Typography>
 				</Link>
 			</Grid>

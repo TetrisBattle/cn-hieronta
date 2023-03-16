@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from '@mui/material'
 
 declare module '@mui/material/styles' {
 	interface BreakpointOverrides {
@@ -42,7 +42,8 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				  }),
 		},
 		typography: {
-			fontFamily: 'Open Sans, Titillium Web, Helvetica, Arial, sans-serif',
+			fontFamily:
+				'Open Sans, Titillium Web, Helvetica, Arial, sans-serif',
 			h1: {
 				fontSize: 48,
 				fontWeight: 400,

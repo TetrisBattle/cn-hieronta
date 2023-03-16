@@ -14,5 +14,5 @@ export default function Ajanvaraus() {
 		}
 	}, [])
 
-	return <Box id='nettivaraus6-container'></Box>
+	return <Box id='nettivaraus6-container' />
 }

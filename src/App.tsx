@@ -13,7 +13,10 @@ export default function App() {
 		<Router>
 			<RootWrapper>
 				<Routes>
-					<Route path='/' element={<Navigate replace to='/Etusivu' />} />
+					<Route
+						path='/'
+						element={<Navigate replace to='/Etusivu' />}
+					/>
 					<Route path='/Etusivu' element={<Etusivu />} />
 					<Route path='/Hinnasto' element={<Hinnasto />} />
 				</Routes>

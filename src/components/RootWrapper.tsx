@@ -2,11 +2,11 @@ import { Box } from '@mui/material'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 
-interface IProps {
+interface RootWrapperProps {
 	children: React.ReactNode
 }
 
-export default function RootWrapper({ children }: IProps) {
+export default function RootWrapper({ children }: RootWrapperProps) {
 	return (
 		<Box
 			sx={{
