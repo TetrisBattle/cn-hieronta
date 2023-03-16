@@ -1,6 +1,6 @@
 import { Grid, Typography, useTheme } from '@mui/material'
 import CamTuImg from 'images/CamTu2.jpeg'
-import { getAge } from 'utility/age'
+import getAge from 'utility/getAge'
 
 export default function Home() {
 	const theme = useTheme()

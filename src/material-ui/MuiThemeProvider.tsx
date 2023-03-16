@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 import MuiTheme from './MuiTheme'
-import { useStoreContext } from 'StoreContext'
+import { useStoreContext } from 'contexts/StoreContext'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 interface MuiThemeProviderProps {

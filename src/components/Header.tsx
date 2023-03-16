@@ -1,17 +1,11 @@
-import { Link } from 'react-router-dom'
 import { AppBar, Toolbar, Button, Box } from '@mui/material'
 import CnHierontapalvelut from 'images/CnHierontapalvelut.png'
+import { RouteOption } from 'AppRoutes'
+import HeaderButton from './HeaderButton'
 
 export default function Header() {
-	const pages = ['Etusivu', 'Hinnasto']
-
 	return (
-		<AppBar
-			sx={{
-				bgcolor: 'unset',
-				boxShadow: 'none',
-			}}
-		>
+		<AppBar sx={{ bgcolor: 'unset', boxShadow: 'none' }}>
 			<Box
 				sx={{
 					mx: 'auto',
@@ -48,16 +42,8 @@ export default function Header() {
 					},
 				}}
 			>
-				{pages.map((page) => (
-					<Button
-						key={page}
-						component={Link}
-						to={`/${page}`}
-						variant='text'
-					>
-						{page}
-					</Button>
-				))}
+				<HeaderButton route={RouteOption.Etusivu} />
+				<HeaderButton route={RouteOption.Hinnasto} />
 				<Button
 					variant='text'
 					href='https://vello.fi/cnhierontapalvelut'

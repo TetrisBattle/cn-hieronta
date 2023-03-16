@@ -1,26 +1,14 @@
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	Navigate,
-} from 'react-router-dom'
-import RootWrapper from 'components/RootWrapper'
-import Etusivu from 'pages/Etusivu'
-import Hinnasto from 'pages/Hinnasto'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import AppRoutes from 'AppRoutes'
 
 export default function App() {
 	return (
 		<Router>
-			<RootWrapper>
-				<Routes>
-					<Route
-						path='/'
-						element={<Navigate replace to='/Etusivu' />}
-					/>
-					<Route path='/Etusivu' element={<Etusivu />} />
-					<Route path='/Hinnasto' element={<Hinnasto />} />
-				</Routes>
-			</RootWrapper>
+			<Header />
+			<AppRoutes />
+			<Footer />
 		</Router>
 	)
 }
