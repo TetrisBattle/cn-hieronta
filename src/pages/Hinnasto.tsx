@@ -66,13 +66,8 @@ export default function Pricing() {
 		],
 	}
 
-	const nykyinenHinnasto = {
+	const hinnasto = {
 		title: 'Hinnat',
-		items: ['20min\t21e', '50min\t43e', '80min\t61e', '110min\t82e'],
-	}
-
-	const tulevaHinnasto = {
-		title: 'Hinnan muutos 1.4.2023 lähtien',
 		items: ['20min\t23e', '50min\t45e', '80min\t63e', '110min\t84e'],
 	}
 
@@ -125,8 +120,7 @@ export default function Pricing() {
 			</Grid>
 
 			<Grid container item xs={12} md={6} spacing={2}>
-				<CustomList {...nykyinenHinnasto} />
-				<CustomList {...tulevaHinnasto} />
+				<CustomList {...hinnasto} />
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
@@ -153,8 +147,7 @@ export default function Pricing() {
 				<Grid item xs={12}>
 					<Typography variant='h2'>Maksutavat</Typography>
 					<Typography>
-						Käteinen, korttimaksu, MobilePay, Epassi, Smartum,
-						Eazybreak, Edenred
+						Käteinen, korttimaksu, Epassi, Smartum, Edenred
 					</Typography>
 				</Grid>
 
