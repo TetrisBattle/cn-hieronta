@@ -1,84 +1,90 @@
-import { Grid, Link, Typography, useTheme } from '@mui/material'
-import Instagram from 'images/Instagram.png'
+import { Box, Link, Typography, useTheme } from '@mui/material'
+import { contactInfoBoxStyle } from './header/ContactInfoBar'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import edenred from 'assets/payments/edenred.webp'
+import smartum from 'assets/payments/smartum.png'
+import epassi from 'assets/payments/epassi.png'
 
 export default function Footer() {
 	const theme = useTheme()
 
-	const info = {
-		address: {
-			street: 'Pakkahuoneenkatu 5 B 17',
-			city: 'Oulu',
-			postCode: '90100',
-		},
-		phoneNumber: '0451420611',
-		email: 'cnhierontapalvelut@gmail.com',
-		instagram: '@CNhierontapalvelut',
-	}
-
 	return (
-		<Grid
-			container
-			component={'footer'}
-			sx={{
-				backgroundColor: '#292929',
-				marginTop: 'auto',
-				color: 'white',
-				padding: 1,
-				justifyContent: 'space-evenly',
-				'& .MuiTypography-root': {
-					fontWeight: 600,
-				},
-				'& .MuiGrid-item': {
+		<Box component={'footer'}>
+			<Box
+				sx={{
+					bgcolor: (theme) => theme.palette.primary.main,
+					minHeight: 72,
+					p: 1,
 					display: 'flex',
-					[theme.breakpoints.down('lg')]: {
-						justifyContent: 'center',
-					},
-					[theme.breakpoints.up('lg')]: {
-						paddingBlock: 1,
-					},
-					[theme.breakpoints.up('xl')]: {
-						'& .MuiTypography-root': {
-							fontSize: '1.25rem',
+					justifyContent: 'space-evenly',
+					alignItems: 'center',
+					[theme.breakpoints.down('sm')]: {
+						flexDirection: 'column',
+						gap: 1,
+						pb: theme.spacing(0),
+						'img:first-of-type': {
+							my: 1,
 						},
 					},
-				},
-			}}
-		>
-			<Grid item xs={12} lg={'auto'}>
-				<Typography>
-					{info.address.street}, {info.address.postCode}{' '}
-					{info.address.city}
-				</Typography>
-			</Grid>
-
-			<Grid item xs={12} lg={'auto'}>
-				<Typography>{info.phoneNumber}</Typography>
-			</Grid>
-
-			<Grid item xs={12} lg={'auto'}>
-				<Typography>{info.email}</Typography>
-			</Grid>
-
-			<Grid item xs={12} lg={'auto'}>
-				<Link
-					href='https://www.instagram.com/CNhierontapalvelut/'
-					target='_blank'
-					sx={{
-						color: 'inherit',
-						display: 'flex',
-						gap: 0.5,
+				}}
+			>
+				<img src={edenred} alt='Edenred' height={64} />
+				<img
+					src={smartum}
+					alt='Smartum'
+					height={32}
+					style={{ alignSelf: 'center' }}
+				/>
+				<img src={epassi} alt='epassi' height={72} />
+			</Box>
+			<Box
+				sx={{
+					display: 'flex',
+					justifyContent: 'space-evenly',
+					flexWrap: 'wrap',
+					bgcolor: 'rgba(0,0,0,0.85)',
+					color: (theme) => theme.palette.primary.main,
+					p: 1,
+					[theme.breakpoints.down('md')]: {
+						flexDirection: 'column',
 						alignItems: 'center',
-					}}
-				>
-					<img
-						src={Instagram}
-						width={24}
-						height={24}
-						alt='Instagram'
-					/>
-					<Typography>{info.instagram}</Typography>
-				</Link>
-			</Grid>
-		</Grid>
+						textAlign: 'center',
+					},
+					[theme.breakpoints.down('sm')]: {
+						'[data-testid=LocationOnIcon]': {
+							display: 'none',
+						},
+						'[data-testid=LocationOnIcon] + .MuiTypography-root': {
+							maxWidth: '24ch',
+						},
+					},
+				}}
+			>
+				<Box sx={contactInfoBoxStyle}>
+					<LocationOnIcon />
+					<Typography>Pakkahuoneenkatu 5 B 17, 90100 Oulu</Typography>
+				</Box>
+				<Box sx={{ display: 'flex' }}>
+					<Link
+						href='https://www.facebook.com/profile.php?id=100091451956031'
+						target='_blank'
+						sx={contactInfoBoxStyle}
+					>
+						<FacebookIcon />
+					</Link>
+					<Link
+						href='https://www.instagram.com/CNhierontapalvelut/'
+						target='_blank'
+						underline='none'
+						sx={contactInfoBoxStyle}
+					>
+						<InstagramIcon />
+						<Typography>CNhierontapalvelut</Typography>
+					</Link>
+				</Box>
+			</Box>
+		</Box>
 	)
 }

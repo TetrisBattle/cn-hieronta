@@ -1,14 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Etusivu from 'pages/Etusivu'
-import Hinnasto from 'pages/Hinnasto'
+import Etusivu from 'features/Etusivu/Etusivu'
+import Palvelut from 'features/Palvelut'
+import Yhteystiedot from 'features/Yhteystiedot'
+import Yritys from 'features/Yritys'
 
 export enum RouteOption {
 	Etusivu = '/etusivu',
-	Hinnasto = '/hinnasto',
-}
-
-export function routeToTitle(route: RouteOption): string {
-	return route[1].toUpperCase() + route.slice(2)
+	Palvelut = '/palvelut',
+	Yhteystiedot = '/yhteystiedot',
+	Yritys = '/yritys',
 }
 
 export default function AppRoutes() {
@@ -20,7 +20,9 @@ export default function AppRoutes() {
 				element={<Navigate replace to={RouteOption.Etusivu} />}
 			/>
 			<Route path={RouteOption.Etusivu} element={<Etusivu />} />
-			<Route path={RouteOption.Hinnasto} element={<Hinnasto />} />
+			<Route path={RouteOption.Palvelut} element={<Palvelut />} />
+			<Route path={RouteOption.Yhteystiedot} element={<Yhteystiedot />} />
+			<Route path={RouteOption.Yritys} element={<Yritys />} />
 		</Routes>
 	)
 }

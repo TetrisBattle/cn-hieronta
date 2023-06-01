@@ -36,7 +36,7 @@ const CustomList = ({ title, items }: CustomListProps) => {
 	)
 }
 
-export default function Pricing() {
+export default function Palvelut() {
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -66,61 +66,58 @@ export default function Pricing() {
 		],
 	}
 
+	const teippaus = {
+		title: 'Teippaus',
+		items: [
+			'Kinesioteippaus: Lihastoiminnan tehostaminen',
+			'Lymfateippaus: Auttaa turvotukseen',
+			'Kovateippaus: Tukee täysin niveltä, eikä päästä ollenkaam virheasentoon',
+		],
+	}
+
 	const hinnasto = {
 		title: 'Hinnat',
-		items: ['20min\t23e', '50min\t45e', '80min\t63e', '110min\t84e'],
+		items: [
+			'20min\t23e',
+			'50min\t45e',
+			'80min\t63e',
+			'110min\t84e',
+			'Teippaus (hoidon yhteydessä)\t+5e',
+			'Ison alueen teippaus\t15e',
+		],
 	}
 
 	return (
 		<Grid
 			container
-			columnSpacing={4}
-			rowSpacing={2}
+			columnSpacing={10}
+			rowSpacing={3}
 			sx={{
+				p: 3,
+				justifyContent: 'center',
 				'& .MuiTypography-root': {
-					fontWeight: 600,
+					fontWeight: (theme) => theme.typography.fontWeightMedium,
 				},
 				'& h2.MuiTypography-root': {
 					marginBottom: 0.5,
-					fontSize: {
-						xs: '1.5rem',
-						xl: '1.75rem',
-					},
-				},
-				'& .MuiTypography-root:not(h2)': {
-					fontSize: {
-						xs: '1rem',
-						xl: '1.25rem',
-					},
-				},
-				p: {
-					xs: '8px 8px 16pc 8px',
-					sm: '8px 25vw 16px 25vw',
-					md: 8,
+					fontSize: '1.75rem',
+					fontWeight: 600,
 				},
 			}}
 		>
-			<Grid container item xs={12} md={6} spacing={2}>
+			<Grid container item xs={12} md={5} spacing={2}>
 				<CustomList {...klassinenHieronta} />
 				<CustomList {...urheiluhieronta} />
 				<CustomList {...purentalihastenHieronta} />
-
-				<Grid item xs={12}>
-					<Typography variant='h2'>Yhteystiedot</Typography>
-					<Typography>
-						Pakkahuoneenkatu 5 B 17, 90100 Oulu, 2. krs.
-					</Typography>
-					<Typography>Puhelinnumero: 0451420611</Typography>
-					<Typography>
-						Sähköposti: cnhierontapalvelut@gmail.com
-					</Typography>
-					<br />
-					<Typography>Oven avaus ovisummerilla.</Typography>
-				</Grid>
+				<CustomList {...teippaus} />
 			</Grid>
 
-			<Grid container item xs={12} md={6} spacing={2}>
+			<Grid container item xs={12} md={5} spacing={2}>
 				<CustomList {...hinnasto} />
+				<Typography sx={{ ml: 4 }}>
+					(teippausta halutessasi kirjoita varauksen yhteydessä
+					lisätietoihin alue ja vaiva)
+				</Typography>
 
 				<Grid item xs={12}>
 					<Typography variant='h2'>Ajanvaraus</Typography>
@@ -153,13 +150,11 @@ export default function Pricing() {
 
 				<Grid item xs={12}>
 					<Button
-						variant='outlined'
+						// variant='outlined'
 						href='https://vello.fi/cnhierontapalvelut'
 						target='_blank'
 						sx={{
-							borderRadius: 40,
-							borderWidth: '4px !important',
-							borderColor: '#333',
+							borderRadius: 99,
 							fontSize: '1.25rem',
 						}}
 					>

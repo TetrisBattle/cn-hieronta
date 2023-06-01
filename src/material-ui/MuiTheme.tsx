@@ -20,7 +20,7 @@ export default function MuiTheme(isDarkTheme: boolean) {
 		breakpoints: {
 			values: {
 				xs: 0,
-				sm: 680,
+				sm: 600,
 				md: 900,
 				lg: 1200,
 				xl: 1536,
@@ -37,7 +37,8 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				: {
 						mode: 'light',
 						primary: {
-							main: '#000',
+							main: '#FEE972',
+							contrastText: '#333',
 						},
 				  }),
 		},
@@ -76,11 +77,6 @@ export default function MuiTheme(isDarkTheme: boolean) {
 					variant: 'contained',
 				},
 			},
-			MuiLink: {
-				defaultProps: {
-					underline: 'none',
-				},
-			},
 			MuiAppBar: {
 				defaultProps: {
 					position: 'static',
@@ -94,6 +90,12 @@ export default function MuiTheme(isDarkTheme: boolean) {
 					root: {
 						minHeight: 'unset !important',
 					},
+				},
+			},
+			MuiTypography: {
+				defaultProps: {
+					fontWeight: theme.typography.fontWeightMedium,
+					fontSize: '1.25rem',
 				},
 			},
 		},
