@@ -56,9 +56,7 @@ export default function Guide() {
 						Sitten alkaakin ihana hoito, jossa pyritään pysymään
 						niin sanotussa &quot;makiassa kivussa&quot;, eli tuntuu
 						että tehdään jotain, muttei hampaat irvessä jotta
-						pysytään täysin rentona. 5. Tehdään lopuksi vielä
-						mahdollisia testäjä, jolloin huomataan onko tullut
-						muutosta lähtötilanteeseen.
+						pysytään täysin rentona.
 					</Typography>
 				</li>
 				<li>
