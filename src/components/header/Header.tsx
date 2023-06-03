@@ -39,7 +39,7 @@ export default function Header() {
 						<Typography component='span' fontSize={'4.5rem'}>
 							CN
 						</Typography>
-						&nbsp;Hierontaplavelut
+						&nbsp;Hierontapalvelut
 					</Typography>
 				</Box>
 			</Box>
