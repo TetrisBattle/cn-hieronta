@@ -10,15 +10,15 @@ export default function Etusivu() {
 			<Summary />
 			<Box
 				sx={{
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
+					textAlign: 'center',
 					p: 3,
+					maxWidth: 720,
+					mx: 'auto',
 				}}
 			>
 				<ReactPlayer
 					url='videos/mainosvideo.mp4'
-					width={720}
+					width='100%'
 					height='auto'
 					controls
 					volume={0.25}
