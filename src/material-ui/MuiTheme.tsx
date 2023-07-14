@@ -43,25 +43,6 @@ export default function MuiTheme(isDarkTheme: boolean) {
 				  }),
 		},
 		typography: {
-			fontFamily:
-				'Open Sans, Titillium Web, Helvetica, Arial, sans-serif',
-			h1: {
-				fontSize: 48,
-				fontWeight: 400,
-			},
-			h2: {
-				fontSize: 36,
-				fontWeight: 400,
-			},
-			h3: {
-				fontSize: 24,
-			},
-			h4: {
-				fontSize: 20,
-			},
-			h5: {
-				fontSize: 16,
-			},
 			button: {
 				fontSize: '1rem',
 				fontWeight: 'bold',
@@ -90,12 +71,6 @@ export default function MuiTheme(isDarkTheme: boolean) {
 					root: {
 						minHeight: 'unset !important',
 					},
-				},
-			},
-			MuiTypography: {
-				defaultProps: {
-					fontWeight: theme.typography.fontWeightMedium,
-					fontSize: '1.25rem',
 				},
 			},
 		},

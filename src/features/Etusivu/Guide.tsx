@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material'
+import { pxToRem } from 'utility/fontHandler'
 
 export default function Guide() {
 	return (
@@ -7,18 +8,19 @@ export default function Guide() {
 				maxWidth: 900,
 				p: 3,
 				mx: 'auto',
-				gap: 2,
+				gap: 1,
 				display: 'flex',
 				flexDirection: 'column',
 				' ul li:not(:first-of-type)': {
-					mt: 2,
+					mt: 1,
 				},
 			}}
 		>
 			<Typography
 				sx={{
 					textAlign: 'center',
-					fontSize: '2rem',
+					fontSize: pxToRem(20),
+					fontWeight: (theme) => theme.typography.fontWeightBold,
 				}}
 			>
 				Hierontakäynti
@@ -26,7 +28,6 @@ export default function Guide() {
 			<ul
 				style={{
 					listStyle: 'order',
-					fontSize: '1.25rem',
 					margin: 0,
 				}}
 			>

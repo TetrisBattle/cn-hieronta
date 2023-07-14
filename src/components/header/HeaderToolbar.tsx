@@ -1,6 +1,7 @@
 import { Box, Button, Toolbar, useTheme } from '@mui/material'
 import { RouteOption } from 'AppRoutes'
 import { NavLink } from 'react-router-dom'
+import { pxToRem } from 'utility/fontHandler'
 
 interface HeaderButtonProps {
 	route: RouteOption
@@ -25,8 +26,7 @@ function HeaderToolbar() {
 				color: (theme) => theme.palette.primary.contrastText,
 				'& .MuiButton-root': {
 					color: 'inherit',
-					fontWeight: (theme) => theme.typography.fontWeightMedium,
-					fontSize: '1.5rem',
+					fontSize: pxToRem(20),
 					'&:hover': {
 						bgcolor: 'rgba(0,0,0,0.1)',
 					},
@@ -45,10 +45,6 @@ function HeaderToolbar() {
 						flexDirection: 'column',
 						'& .MuiButton-root': {
 							py: 0,
-							fontSize: '1.3rem',
-						},
-						'& .MuiButton-root:not(:last-of-type)': {
-							fontSize: '1.25rem',
 						},
 					},
 				}}

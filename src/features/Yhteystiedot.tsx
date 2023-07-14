@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import maps from 'assets/google_maps.png'
+import { pxToRem } from 'utility/fontHandler'
 
 function Yhteystiedot() {
 	const theme = useTheme()
@@ -28,12 +29,8 @@ function Yhteystiedot() {
 				sx={{
 					mx: 'auto',
 					p: 3,
-					[theme.breakpoints.up('md')]: {
-						' .MuiTypography-root': {
-							fontSize: {
-								md: '1.5rem',
-							},
-						},
+					' .MuiTypography-root': {
+						fontSize: pxToRem(20),
 					},
 				}}
 			>

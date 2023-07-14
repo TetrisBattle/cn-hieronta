@@ -2,41 +2,41 @@ import { AppBar, Box, Typography } from '@mui/material'
 import backgroundImg from 'assets/camtu/camtu_massaging_background.jpg'
 import ContactInfoBar from './ContactInfoBar'
 import HeaderToolbar from './HeaderToolbar'
+import { pxToRem } from 'utility/fontHandler'
 
 export default function Header() {
 	return (
 		<AppBar sx={{ bgcolor: 'unset', boxShadow: 'none' }}>
 			<Box
+				id='backgroundImg'
 				sx={{
 					backgroundImage: `url(${backgroundImg})`,
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center ',
 					width: 1,
-					height: 400,
+					height: 240,
 					color: (theme) => theme.palette.primary.main,
+					display: 'flex',
+					flexDirection: 'column',
 				}}
 			>
+				<ContactInfoBar />
 				<Box
 					sx={{
-						width: 1,
 						height: 1,
-						bgcolor: 'rgba(0,0,0,0.4)',
-						position: 'relative',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
 					}}
 				>
-					<ContactInfoBar />
 					<Typography
 						variant='h1'
 						sx={{
-							position: 'absolute',
-							top: '50%',
-							left: '50%',
-							transform: 'translate(-50%, -50%)',
-							fontSize: '2rem',
+							fontSize: pxToRem(32),
 						}}
 					>
-						<Typography component='span' fontSize={'4.5rem'}>
+						<Typography component='span' fontSize={pxToRem(48)}>
 							CN
 						</Typography>
 						&nbsp;Hierontapalvelut

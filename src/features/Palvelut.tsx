@@ -6,6 +6,7 @@ import {
 	ListItem,
 	ListItemText,
 } from '@mui/material'
+import { pxToRem } from 'utility/fontHandler'
 
 interface CustomListProps {
 	title: string
@@ -25,10 +26,18 @@ const CustomList = ({ title, items }: CustomListProps) => {
 						sx={{
 							display: 'list-item',
 							listStyle: 'disc',
-							marginLeft: 2.5,
+							marginLeft: 2,
 						}}
 					>
-						<ListItemText>{item}</ListItemText>
+						<ListItemText
+							sx={{
+								' span': {
+									fontSize: pxToRem(16),
+								},
+							}}
+						>
+							{item}
+						</ListItemText>
 					</ListItem>
 				))}
 			</List>
@@ -100,7 +109,7 @@ export default function Palvelut() {
 				},
 				'& h2.MuiTypography-root': {
 					marginBottom: 0.5,
-					fontSize: '1.75rem',
+					fontSize: pxToRem(20),
 					fontWeight: 600,
 				},
 			}}
@@ -155,7 +164,6 @@ export default function Palvelut() {
 						target='_blank'
 						sx={{
 							borderRadius: 99,
-							fontSize: '1.25rem',
 						}}
 					>
 						Tästä ajanvaraukseen

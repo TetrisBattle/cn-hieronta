@@ -1,4 +1,5 @@
 import { Box, Link, Typography, useTheme } from '@mui/material'
+import { pxToRem } from 'utility/fontHandler'
 
 function Summary() {
 	const theme = useTheme()
@@ -10,13 +11,15 @@ function Summary() {
 				textAlign: 'center',
 				display: 'flex',
 				flexDirection: 'column',
-				gap: 2,
-				' .MuiBox-root .MuiTypography-root:not(a)': {
-					fontSize: '1.25rem',
-				},
+				gap: 1,
 			}}
 		>
-			<Typography sx={{ fontSize: '2rem' }}>
+			<Typography
+				sx={{
+					fontSize: pxToRem(20),
+					fontWeight: theme.typography.fontWeightBold,
+				}}
+			>
 				Hierontaa Oulun keskustassa
 			</Typography>
 
@@ -42,9 +45,8 @@ function Summary() {
 						target='_blank'
 						color={theme.palette.text.primary}
 						fontWeight={theme.typography.fontWeightBold}
-						fontSize='1.5rem'
 					>
-						tästä
+						tästä.
 					</Link>
 				</Typography>
 			</Box>

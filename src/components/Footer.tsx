@@ -5,7 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import edenred from 'assets/payments/edenred.webp'
 import smartum from 'assets/payments/smartum.png'
-import epassi from 'assets/payments/epassi.png'
+import epassi from 'assets/payments/epassi.webp'
 
 export default function Footer() {
 	const theme = useTheme()
@@ -15,7 +15,6 @@ export default function Footer() {
 			<Box
 				sx={{
 					bgcolor: (theme) => theme.palette.primary.main,
-					minHeight: 72,
 					p: 1,
 					display: 'flex',
 					justifyContent: 'space-evenly',
@@ -23,21 +22,22 @@ export default function Footer() {
 					[theme.breakpoints.down('sm')]: {
 						flexDirection: 'column',
 						gap: 1,
-						pb: theme.spacing(0),
-						'img:first-of-type': {
-							my: 1,
-						},
 					},
 				}}
 			>
-				<img src={edenred} alt='Edenred' height={64} />
+				<img src={edenred} alt='Edenred' height={40} />
 				<img
 					src={smartum}
 					alt='Smartum'
-					height={32}
+					height={24}
 					style={{ alignSelf: 'center' }}
 				/>
-				<img src={epassi} alt='epassi' height={72} />
+				<img
+					src={epassi}
+					alt='epassi'
+					height={34}
+					style={{ paddingBottom: 4 }}
+				/>
 			</Box>
 			<Box
 				sx={{
