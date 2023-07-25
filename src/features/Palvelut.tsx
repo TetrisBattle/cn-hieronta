@@ -6,7 +6,6 @@ import {
 	ListItem,
 	ListItemText,
 } from '@mui/material'
-import { useStore } from 'contexts/StoreContext'
 import { observer } from 'mobx-react-lite'
 import { pxToRem } from 'utility/fontHandler'
 
@@ -48,8 +47,6 @@ const CustomList = ({ title, items }: CustomListProps) => {
 }
 
 function Palvelut() {
-	const { appStore } = useStore()
-
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -106,7 +103,6 @@ function Palvelut() {
 			columnGap={10}
 			rowGap={3}
 			sx={{
-				minHeight: `calc(100dvh - ${appStore.headerHeight}px - ${appStore.footerHeight}px)`,
 				p: 3,
 				justifyContent: 'center',
 				'& .MuiTypography-root': {

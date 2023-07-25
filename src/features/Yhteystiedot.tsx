@@ -10,7 +10,7 @@ function Yhteystiedot() {
 			sx={{
 				display: 'flex',
 				alignItems: 'center',
-				[theme.breakpoints.down(760)]: {
+				[theme.breakpoints.down('lg')]: {
 					flexDirection: 'column',
 					img: {
 						width: '100% !important',
@@ -23,7 +23,7 @@ function Yhteystiedot() {
 			<img
 				src={maps}
 				alt='GoogleMaps'
-				style={{ width: '50vw', height: 'auto' }}
+				style={{ width: '50vw', height: 'auto', padding: 32 }}
 			/>
 			<Box
 				sx={{

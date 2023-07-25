@@ -6,22 +6,12 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import edenred from 'assets/payments/edenred.webp'
 import smartum from 'assets/payments/smartum.png'
 import epassi from 'assets/payments/epassi.webp'
-import { useHeightObserver } from 'hooks/useHeightObserver'
-import { useEffect, useRef } from 'react'
-import { useStore } from 'contexts/StoreContext'
 
 export default function Footer() {
-	const { appStore } = useStore()
-	const footerRef = useRef<HTMLDivElement | null>(null)
-	const footerHeight = useHeightObserver(footerRef)
 	const theme = useTheme()
 
-	useEffect(() => {
-		appStore.setFooterHeight(footerHeight)
-	}, [appStore, footerHeight])
-
 	return (
-		<Box ref={footerRef} component={'footer'}>
+		<Box component={'footer'}>
 			<Box
 				sx={{
 					bgcolor: (theme) => theme.palette.primary.main,
