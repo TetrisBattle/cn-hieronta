@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 import MuiTheme from './MuiTheme'
-import { useStoreContext } from 'contexts/StoreContext'
+import { useStore } from 'contexts/StoreContext'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 interface MuiThemeProviderProps {
@@ -9,7 +9,7 @@ interface MuiThemeProviderProps {
 }
 
 function MuiThemeProvider({ children }: MuiThemeProviderProps) {
-	const { appStore } = useStoreContext()
+	const { appStore } = useStore()
 	const theme = MuiTheme(appStore.isDarkTheme)
 
 	return (

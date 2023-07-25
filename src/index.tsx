@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { StoreContextProvider } from 'contexts/StoreContext'
+import { StoreProvider } from 'contexts/StoreContext'
 import MuiThemeProvider from 'material-ui/MuiThemeProvider'
 import App from './App'
 
@@ -10,10 +10,10 @@ const rootElement = ReactDOM.createRoot(
 
 rootElement.render(
 	<React.StrictMode>
-		<StoreContextProvider>
+		<StoreProvider>
 			<MuiThemeProvider>
 				<App />
 			</MuiThemeProvider>
-		</StoreContextProvider>
+		</StoreProvider>
 	</React.StrictMode>
 )

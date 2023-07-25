@@ -6,6 +6,8 @@ import {
 	ListItem,
 	ListItemText,
 } from '@mui/material'
+import { useStore } from 'contexts/StoreContext'
+import { observer } from 'mobx-react-lite'
 import { pxToRem } from 'utility/fontHandler'
 
 interface CustomListProps {
@@ -45,7 +47,9 @@ const CustomList = ({ title, items }: CustomListProps) => {
 	)
 }
 
-export default function Palvelut() {
+function Palvelut() {
+	const { appStore } = useStore()
+
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -99,9 +103,10 @@ export default function Palvelut() {
 	return (
 		<Grid
 			container
-			columnSpacing={10}
-			rowSpacing={3}
+			columnGap={10}
+			rowGap={3}
 			sx={{
+				minHeight: `calc(100dvh - ${appStore.headerHeight}px - ${appStore.footerHeight}px)`,
 				p: 3,
 				justifyContent: 'center',
 				'& .MuiTypography-root': {
@@ -114,14 +119,14 @@ export default function Palvelut() {
 				},
 			}}
 		>
-			<Grid container item xs={12} md={5} spacing={2}>
+			<Grid item container xs={12} md={5} spacing={2}>
 				<CustomList {...klassinenHieronta} />
 				<CustomList {...urheiluhieronta} />
 				<CustomList {...purentalihastenHieronta} />
 				<CustomList {...teippaus} />
 			</Grid>
 
-			<Grid container item xs={12} md={5} spacing={2}>
+			<Grid item container xs={12} md={5} spacing={2}>
 				<CustomList {...hinnasto} />
 				<Typography sx={{ ml: 4 }}>
 					(teippausta halutessasi kirjoita varauksen yhteydessä
@@ -173,3 +178,5 @@ export default function Palvelut() {
 		</Grid>
 	)
 }
+
+export default observer(Palvelut)

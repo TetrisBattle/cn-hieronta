@@ -8,7 +8,7 @@ interface StoreContextProviderProps {
 const rootStore = new RootStore()
 const StoreContext = createContext(rootStore)
 
-export function StoreContextProvider({ children }: StoreContextProviderProps) {
+export function StoreProvider({ children }: StoreContextProviderProps) {
 	return (
 		<StoreContext.Provider value={rootStore}>
 			{children}
@@ -16,6 +16,6 @@ export function StoreContextProvider({ children }: StoreContextProviderProps) {
 	)
 }
 
-export function useStoreContext() {
+export function useStore() {
 	return useContext(StoreContext)
 }
