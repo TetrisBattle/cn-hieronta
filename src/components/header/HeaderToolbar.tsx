@@ -59,7 +59,7 @@ function HeaderToolbar() {
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<Button
 					variant='text'
-					href='https://vello.fi/cnhierontapalvelut'
+					href='https://booksalon.fi/cn-hierontapalvelut'
 					target='_blank'
 					sx={{
 						minWidth: 'max-content',

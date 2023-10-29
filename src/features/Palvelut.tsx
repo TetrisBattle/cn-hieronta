@@ -5,6 +5,7 @@ import {
 	List,
 	ListItem,
 	ListItemText,
+	Box,
 } from '@mui/material'
 import { observer } from 'mobx-react-lite'
 import { pxToRem } from 'utility/fontHandler'
@@ -16,7 +17,7 @@ interface CustomListProps {
 
 const CustomList = ({ title, items }: CustomListProps) => {
 	return (
-		<Grid item xs={12}>
+		<Box sx={{ display: 'flex', flexDirection: 'column' }}>
 			<Typography variant='h2'>{title}</Typography>
 			<List dense disablePadding>
 				{items.map((item) => (
@@ -42,7 +43,7 @@ const CustomList = ({ title, items }: CustomListProps) => {
 					</ListItem>
 				))}
 			</List>
-		</Grid>
+		</Box>
 	)
 }
 
@@ -85,6 +86,16 @@ function Palvelut() {
 		],
 	}
 
+	const kuivakuppaus = {
+		title: 'Kuivakuppaus',
+		items: [
+			'Ihoa, ihonalaiskudoksia ja lihaskalvoa nostetaan kupeilla irti alustastaan, eli mekaniikka on päinvastainen kuin hieronnalla.',
+			'Alipaineella saadaan tilaa ihon alla oleviin kudoksiin ja aineenvaihdunta paranee ja liikkuvuus lisääntyy. Samalla hoidetaan tietenkin lihaksia ja kireyspisteitä.',
+			'Hieronnan ohella tehtävä kuppaus nopeuttaa hoitotuloksen saamista ja tuntuu tosi miellyttävältä',
+			'Kuppeja pidetään paikoillaan. Tästä johtuen jos kupin alla olevalla alueella on heikko aineenvaihdunta, tähän tulee jäämään verenpurkauma (mustelma) jälki.',
+		],
+	}
+
 	const hinnasto = {
 		title: 'Hinnat',
 		items: [
@@ -92,8 +103,9 @@ function Palvelut() {
 			'50min\t45e',
 			'80min\t63e',
 			'110min\t84e',
-			'Teippaus (hoidon yhteydessä)\t+5e',
+			'Teippaus hoidon yhteydessä\t+5e',
 			'Ison alueen teippaus\t15e',
+			'Kuivakuppaus hoidon yhteydessä\t+5e',
 		],
 	}
 
@@ -116,60 +128,65 @@ function Palvelut() {
 			}}
 		>
 			<Grid item container xs={12} md={5} spacing={2}>
-				<CustomList {...klassinenHieronta} />
-				<CustomList {...urheiluhieronta} />
-				<CustomList {...purentalihastenHieronta} />
-				<CustomList {...teippaus} />
+				<Grid item xs={12}>
+					<CustomList {...klassinenHieronta} />
+				</Grid>
+				<Grid item xs={12}>
+					<CustomList {...urheiluhieronta} />
+				</Grid>
+				<Grid item xs={12}>
+					<CustomList {...purentalihastenHieronta} />
+				</Grid>
+				<Grid item xs={12}>
+					<CustomList {...teippaus} />
+				</Grid>
+				<Grid item xs={12}>
+					<CustomList {...kuivakuppaus} />
+				</Grid>
 			</Grid>
 
-			<Grid item container xs={12} md={5} spacing={2}>
-				<CustomList {...hinnasto} />
-				<Typography sx={{ ml: 4 }}>
-					(teippausta halutessasi kirjoita varauksen yhteydessä
-					lisätietoihin alue ja vaiva)
-				</Typography>
+			<Grid item xs={12} md={5}>
+				<Box sx={{ display: 'Flex', flexDirection: 'column', gap: 2 }}>
+					<CustomList {...hinnasto} />
 
-				<Grid item xs={12}>
-					<Typography variant='h2'>Ajanvaraus</Typography>
 					<Typography>
-						Esteen tullessa peru 12h ennen varattua aikaa
-						sähköpostiisi tulleesta linkistä, soittamalla tai
-						tekstiviestillä.
+						Teippausta halutessasi kirjoita varauksen yhteydessä
+						lisätietoihin alue ja vaiva
 					</Typography>
-					<br />
-					<Typography>
-						Jos tulet ensimmäistä kertaa paikalle, saavuthan 5
-						minuuttia aiemmin paikalle.
-					</Typography>
-					<br />
-					<Typography>
-						Alle 12h peruutetusta ajasta perin 50%, alle 6h 100%.
-					</Typography>
-					<Typography>
-						Yrityksille ja järjestöille voidaan sopia tarjouksia
-						sähköpostitse.
-					</Typography>
-				</Grid>
 
-				<Grid item xs={12}>
-					<Typography variant='h2'>Maksutavat</Typography>
-					<Typography>
-						Käteinen, korttimaksu, Epassi, Smartum, Edenred
-					</Typography>
-				</Grid>
+					<Box>
+						<Typography variant='h2'>Ajanvaraus</Typography>
+						<Typography>
+							Esteen tullessa peru 24h ennen varattua aikaa
+							sähköpostiisi tulleesta linkistä, soittamalla tai
+							tekstiviestillä. Peruuttamattomasta tai alle 24h
+							peruutetusta ajasta veloitan 100%.
+						</Typography>
+						<Typography>
+							Jos tulet ensimmäistä kertaa paikalle, saavuthan 5
+							minuuttia aiemmin paikalle.
+						</Typography>
+					</Box>
 
-				<Grid item xs={12}>
-					<Button
-						// variant='outlined'
-						href='https://vello.fi/cnhierontapalvelut'
-						target='_blank'
-						sx={{
-							borderRadius: 99,
-						}}
-					>
-						Tästä ajanvaraukseen
-					</Button>
-				</Grid>
+					<Box>
+						<Typography variant='h2'>Maksutavat</Typography>
+						<Typography>
+							Käteinen, korttimaksu, Epassi, Smartum, Edenred
+						</Typography>
+					</Box>
+
+					<Box>
+						<Button
+							href='https://booksalon.fi/cn-hierontapalvelut'
+							target='_blank'
+							sx={{
+								borderRadius: 99,
+							}}
+						>
+							Tästä ajanvaraukseen
+						</Button>
+					</Box>
+				</Box>
 			</Grid>
 		</Grid>
 	)

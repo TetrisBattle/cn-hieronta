@@ -41,7 +41,7 @@ function Summary() {
 				<Typography>
 					Siirry ajanvaraus kalenteriin&nbsp;
 					<Link
-						href='https://vello.fi/cnhierontapalvelut'
+						href='https://booksalon.fi/cn-hierontapalvelut'
 						target='_blank'
 						color={theme.palette.text.primary}
 						fontWeight={theme.typography.fontWeightBold}
