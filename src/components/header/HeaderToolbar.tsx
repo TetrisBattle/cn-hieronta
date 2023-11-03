@@ -1,17 +1,16 @@
 import { Box, Button, Toolbar, useTheme } from '@mui/material'
-import { RouteOption } from 'AppRoutes'
+import { RouteOption } from 'App/Routes'
 import { NavLink } from 'react-router-dom'
-import { pxToRem } from 'utility/fontHandler'
 
 interface HeaderButtonProps {
 	route: RouteOption
 	children: React.ReactNode
 }
 
-function HeaderToolbar() {
+export const HeaderToolbar = () => {
 	const theme = useTheme()
 
-	function LinkButton({ route, children }: HeaderButtonProps) {
+	const LinkButton = ({ route, children }: HeaderButtonProps) => {
 		return (
 			<Button component={NavLink} to={route} variant='text'>
 				{children}
@@ -26,7 +25,7 @@ function HeaderToolbar() {
 				color: (theme) => theme.palette.primary.contrastText,
 				'& .MuiButton-root': {
 					color: 'inherit',
-					fontSize: pxToRem(20),
+					fontSize: (theme) => theme.typography.pxToRem(20),
 					'&:hover': {
 						bgcolor: 'rgba(0,0,0,0.1)',
 					},
@@ -40,6 +39,7 @@ function HeaderToolbar() {
 					flexWrap: 'wrap',
 					'& .MuiButton-root': {
 						flexGrow: 1,
+						fontWeight: (theme) => theme.typography.fontWeightBold,
 					},
 					[theme.breakpoints.down('sm')]: {
 						flexDirection: 'column',
@@ -64,8 +64,6 @@ function HeaderToolbar() {
 					sx={{
 						minWidth: 'max-content',
 						color: 'inherit',
-						fontWeight: (theme) =>
-							theme.typography.fontWeightBold + '!important',
 					}}
 				>
 					Varaa aika
@@ -74,5 +72,3 @@ function HeaderToolbar() {
 		</Toolbar>
 	)
 }
-
-export default HeaderToolbar

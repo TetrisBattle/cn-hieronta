@@ -1,10 +1,10 @@
 import ReactPlayer from 'react-player'
 import { Box, Typography } from '@mui/material'
-import Summary from './Summary'
-import CommentsSection from './CommentsSection'
-import Guide from './Guide'
+import { Summary } from './Summary'
+import { CommentsSection } from './CommentsSection'
+import { Guide } from './Guide'
 
-export default function Etusivu() {
+export const Etusivu = () => {
 	return (
 		<>
 			<Summary />

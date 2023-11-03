@@ -1,7 +1,6 @@
 import { Box, Link, Typography, useTheme } from '@mui/material'
-import { pxToRem } from 'utility/fontHandler'
 
-function Summary() {
+export const Summary = () => {
 	const theme = useTheme()
 
 	return (
@@ -16,7 +15,7 @@ function Summary() {
 		>
 			<Typography
 				sx={{
-					fontSize: pxToRem(20),
+					fontSize: (theme) => theme.typography.pxToRem(20),
 					fontWeight: theme.typography.fontWeightBold,
 				}}
 			>
@@ -53,5 +52,3 @@ function Summary() {
 		</Box>
 	)
 }
-
-export default Summary

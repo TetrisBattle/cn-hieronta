@@ -1,5 +1,5 @@
 import { Box, Link, Typography, useTheme } from '@mui/material'
-import { contactInfoBoxStyle } from './header/ContactInfoBar'
+import { contactInfoBoxStyle } from './Header/contactInfoBoxStyle'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
@@ -7,7 +7,7 @@ import edenred from 'assets/payments/edenred.webp'
 import smartum from 'assets/payments/smartum.png'
 import epassi from 'assets/payments/epassi.webp'
 
-export default function Footer() {
+export const Footer = () => {
 	const theme = useTheme()
 
 	return (

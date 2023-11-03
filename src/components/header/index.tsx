@@ -1,10 +1,9 @@
 import { AppBar, Box, Typography } from '@mui/material'
 import backgroundImg from 'assets/camtu/camtu_massaging_background.jpg'
-import ContactInfoBar from './ContactInfoBar'
-import HeaderToolbar from './HeaderToolbar'
-import { pxToRem } from 'utility/fontHandler'
+import { ContactInfoBar } from './ContactInfoBar'
+import { HeaderToolbar } from './HeaderToolbar'
 
-export default function Header() {
+export const Header = () => {
 	return (
 		<AppBar sx={{ bgcolor: 'unset', boxShadow: 'none' }}>
 			<Box
@@ -33,10 +32,18 @@ export default function Header() {
 					<Typography
 						variant='h1'
 						sx={{
-							fontSize: pxToRem(32),
+							fontSize: (theme) => theme.typography.pxToRem(32),
+							fontWeight: (theme) =>
+								theme.typography.fontWeightRegular,
 						}}
 					>
-						<Typography component='span' fontSize={pxToRem(48)}>
+						<Typography
+							component='span'
+							sx={{
+								fontSize: (theme) =>
+									theme.typography.pxToRem(48),
+							}}
+						>
 							CN
 						</Typography>
 						&nbsp;Hierontapalvelut

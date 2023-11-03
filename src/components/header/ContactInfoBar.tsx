@@ -1,18 +1,9 @@
 import { Box, Link, Typography, useTheme } from '@mui/material'
 import PhoneIcon from '@mui/icons-material/Phone'
 import InstagramIcon from '@mui/icons-material/Instagram'
-import { pxToRem } from 'utility/fontHandler'
+import { contactInfoBoxStyle } from './contactInfoBoxStyle'
 
-export const contactInfoBoxStyle = {
-	display: 'flex',
-	alignItems: 'center',
-	gap: 0.5,
-	' .MuiTypography-root': {
-		width: 'max-content',
-	},
-}
-
-function ContactInfoBar() {
+export const ContactInfoBar = () => {
 	const theme = useTheme()
 
 	return (
@@ -25,7 +16,7 @@ function ContactInfoBar() {
 				justifyContent: 'space-evenly',
 				flexWrap: 'wrap',
 				'& .MuiTypography-root': {
-					fontSize: pxToRem(20),
+					fontSize: (theme) => theme.typography.pxToRem(20),
 				},
 				[theme.breakpoints.down('md')]: {
 					flexDirection: 'column',
@@ -52,5 +43,3 @@ function ContactInfoBar() {
 		</Box>
 	)
 }
-
-export default ContactInfoBar

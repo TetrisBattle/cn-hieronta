@@ -1,7 +1,7 @@
 import { Grid, Typography, useTheme } from '@mui/material'
 import CamTuImg from 'assets/camtu/camtu.jpeg'
 
-export default function Yritys() {
+export const Yritys = () => {
 	const theme = useTheme()
 
 	return (

@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material'
-import { pxToRem } from 'utility/fontHandler'
 
-export default function Guide() {
+export const Guide = () => {
 	return (
 		<Box
 			sx={{
@@ -19,7 +18,7 @@ export default function Guide() {
 			<Typography
 				sx={{
 					textAlign: 'center',
-					fontSize: pxToRem(20),
+					fontSize: (theme) => theme.typography.pxToRem(20),
 					fontWeight: (theme) => theme.typography.fontWeightBold,
 				}}
 			>

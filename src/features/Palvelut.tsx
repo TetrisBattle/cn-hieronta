@@ -8,14 +8,13 @@ import {
 	Box,
 } from '@mui/material'
 import { observer } from 'mobx-react-lite'
-import { pxToRem } from 'utility/fontHandler'
 
 interface CustomListProps {
 	title: string
 	items: string[]
 }
 
-const CustomList = ({ title, items }: CustomListProps) => {
+export const CustomList = ({ title, items }: CustomListProps) => {
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column' }}>
 			<Typography variant='h2'>{title}</Typography>
@@ -34,7 +33,8 @@ const CustomList = ({ title, items }: CustomListProps) => {
 						<ListItemText
 							sx={{
 								' span': {
-									fontSize: pxToRem(16),
+									fontSize: (theme) =>
+										theme.typography.pxToRem(16),
 								},
 							}}
 						>
@@ -47,7 +47,7 @@ const CustomList = ({ title, items }: CustomListProps) => {
 	)
 }
 
-function Palvelut() {
+export const Palvelut = observer(() => {
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -117,13 +117,10 @@ function Palvelut() {
 			sx={{
 				p: 3,
 				justifyContent: 'center',
-				'& .MuiTypography-root': {
-					fontWeight: (theme) => theme.typography.fontWeightMedium,
-				},
 				'& h2.MuiTypography-root': {
 					marginBottom: 0.5,
-					fontSize: pxToRem(20),
-					fontWeight: 600,
+					fontSize: (theme) => theme.typography.pxToRem(20),
+					fontWeight: (theme) => theme.typography.fontWeightMedium,
 				},
 			}}
 		>
@@ -181,6 +178,8 @@ function Palvelut() {
 							target='_blank'
 							sx={{
 								borderRadius: 99,
+								fontWeight: (theme) =>
+									theme.typography.fontWeightBold,
 							}}
 						>
 							Tästä ajanvaraukseen
@@ -190,6 +189,4 @@ function Palvelut() {
 			</Grid>
 		</Grid>
 	)
-}
-
-export default observer(Palvelut)
+})
