@@ -2,7 +2,7 @@ import { Box, Button, Toolbar, useTheme } from '@mui/material'
 import { RouteOption } from 'App/Routes'
 import { NavLink } from 'react-router-dom'
 
-interface HeaderButtonProps {
+type LinkButtonProps = {
 	route: RouteOption
 	children: React.ReactNode
 }
@@ -10,7 +10,7 @@ interface HeaderButtonProps {
 export const HeaderToolbar = () => {
 	const theme = useTheme()
 
-	const LinkButton = ({ route, children }: HeaderButtonProps) => {
+	const LinkButton = ({ route, children }: LinkButtonProps) => {
 		return (
 			<Button component={NavLink} to={route} variant='text'>
 				{children}

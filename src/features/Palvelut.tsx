@@ -9,7 +9,7 @@ import {
 } from '@mui/material'
 import { observer } from 'mobx-react-lite'
 
-interface CustomListProps {
+type CustomListProps = {
 	title: string
 	items: string[]
 }
