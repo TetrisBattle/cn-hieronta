@@ -14,9 +14,7 @@ export const Root = () => {
 				}}
 			>
 				<Header />
-				<Box sx={{ flexGrow: 1 }}>
-					<Outlet />
-				</Box>
+				<Outlet />
 				<Footer />
 			</Box>
 		</>

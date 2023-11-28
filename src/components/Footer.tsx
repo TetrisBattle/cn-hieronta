@@ -11,7 +11,7 @@ export const Footer = () => {
 	const theme = useTheme()
 
 	return (
-		<Box component={'footer'}>
+		<Box component={'footer'} sx={{ mt: 'auto' }}>
 			<Box
 				sx={{
 					bgcolor: (theme) => theme.palette.primary.main,

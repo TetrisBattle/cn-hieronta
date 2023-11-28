@@ -5,7 +5,7 @@ import { Guide } from './Guide'
 
 export const Etusivu = () => {
 	return (
-		<>
+		<Box>
 			<Summary />
 			<Box
 				sx={{
@@ -40,6 +40,6 @@ export const Etusivu = () => {
 			</Box>
 			<Guide />
 			<CommentsSection />
-		</>
+		</Box>
 	)
 }

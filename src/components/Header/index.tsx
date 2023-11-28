@@ -58,42 +58,39 @@ const DesktopView = () => {
 
 const MobileView = () => {
 	return (
-		<>
-			<AppBar
+		<AppBar
+			sx={{
+				display: 'flex',
+				flexDirection: 'row',
+				justifyContent: 'space-between',
+				position: 'sticky',
+				top: 0,
+				zIndex: (theme) => theme.zIndex.drawer,
+				backgroundImage: `url(${backgroundImg})`,
+				color: (theme) => theme.palette.primary.main,
+				backgroundSize: 'cover',
+			}}
+		>
+			<Typography
+				variant='h1'
 				sx={{
-					display: 'flex',
-					flexDirection: 'row',
-					justifyContent: 'space-between',
-					position: 'fixed',
-					zIndex: (theme) => theme.zIndex.drawer,
-					backgroundImage: `url(${backgroundImg})`,
-					color: (theme) => theme.palette.primary.main,
-					backgroundSize: 'cover',
+					px: 1,
+					fontSize: (theme) => theme.typography.pxToRem(24),
+					fontWeight: (theme) => theme.typography.fontWeightRegular,
 				}}
 			>
 				<Typography
-					variant='h1'
+					component='span'
 					sx={{
-						px: 1,
-						fontSize: (theme) => theme.typography.pxToRem(24),
-						fontWeight: (theme) =>
-							theme.typography.fontWeightRegular,
+						fontSize: (theme) => theme.typography.pxToRem(32),
 					}}
 				>
-					<Typography
-						component='span'
-						sx={{
-							fontSize: (theme) => theme.typography.pxToRem(32),
-						}}
-					>
-						CN
-					</Typography>
-					&nbsp;Hierontapalvelut
+					CN
 				</Typography>
-				<HeaderMenu />
-			</AppBar>
-			<Box sx={{ height: 48 }} />
-		</>
+				&nbsp;Hierontapalvelut
+			</Typography>
+			<HeaderMenu />
+		</AppBar>
 	)
 }
 
