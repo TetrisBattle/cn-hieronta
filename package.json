@@ -15,7 +15,7 @@
 	},
 	"dependencies": {
 		"@mui/icons-material": "^5.11.16",
-		"@thng/react": "^1.0.4",
+		"@thng/react": "^1.0.9",
 		"mobx": "^6.9.0",
 		"mobx-react-lite": "^3.4.3",
 		"react": "^18.2.0",
