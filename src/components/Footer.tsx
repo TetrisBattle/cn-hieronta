@@ -64,7 +64,7 @@ export const Footer = () => {
 			>
 				<Box sx={contactInfoBoxStyle}>
 					<LocationOnIcon />
-					<Typography>Pakkahuoneenkatu 5 B 17, 90100 Oulu</Typography>
+					<Typography>Harjapäänkatu 33, 90400 Oulu</Typography>
 				</Box>
 				<Box sx={{ display: 'flex' }}>
 					<Link

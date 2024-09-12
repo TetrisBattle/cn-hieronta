@@ -59,7 +59,7 @@ export const HeaderToolbar = () => {
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<Button
 					variant='text'
-					href='https://booksalon.fi/cn-hierontapalvelut'
+					href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
 					target='_blank'
 					sx={{
 						minWidth: 'max-content',

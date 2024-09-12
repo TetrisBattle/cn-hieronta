@@ -63,7 +63,7 @@ export const HeaderMenu = () => {
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<MenuItem onClick={toggleOpen}>
 					<Link
-						href='https://booksalon.fi/cn-hierontapalvelut'
+						href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
 						target='_blank'
 						sx={{
 							color: (theme) =>

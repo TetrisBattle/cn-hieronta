@@ -34,13 +34,13 @@ export const Summary = () => {
 			<Box>
 				<Typography>
 					Toimitila sijaitsee Pataässän vieressä osoitteessa
-					Pakkahuoneenkatu 5 B 17, 90100 Oulu.
+					Harjapäänkatu 33, 90400 Oulu.
 				</Typography>
 				<Typography>Sisäänpääsy summeria soittamalla.</Typography>
 				<Typography>
 					Siirry ajanvaraus kalenteriin&nbsp;
 					<Link
-						href='https://booksalon.fi/cn-hierontapalvelut'
+						href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
 						target='_blank'
 						color={theme.palette.text.primary}
 						fontWeight={theme.typography.fontWeightBold}

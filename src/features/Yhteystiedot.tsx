@@ -33,9 +33,7 @@ export const Yhteystiedot = () => {
 					},
 				}}
 			>
-				<Typography>
-					Pakkahuoneenkatu 5 B 17, 90100 Oulu, 2. krs.
-				</Typography>
+				<Typography>Harjapäänkatu 33, 90400 Oulu</Typography>
 				<Typography>Oven avaus ovisummerilla</Typography>
 				<br />
 				<Typography>Puhelinnumero: +358 451420611</Typography>
