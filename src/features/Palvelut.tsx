@@ -99,13 +99,13 @@ export const Palvelut = observer(() => {
 	const hinnasto = {
 		title: 'Hinnat',
 		items: [
-			'20min\t23e',
-			'50min\t45e',
-			'80min\t63e',
-			'110min\t84e',
-			'Teippaus hoidon yhteydessä\t+5e',
-			'Ison alueen teippaus\t15e',
-			'Kuivakuppaus hoidon yhteydessä\t+5e',
+			'30min\t30e',
+			'45min\t45e',
+			'60min\t55e',
+			'75min\t65e',
+			'90min\t75e',
+			'105min\t85e',
+			'120min\t95e',
 		],
 	}
 
@@ -146,22 +146,13 @@ export const Palvelut = observer(() => {
 				<Box sx={{ display: 'Flex', flexDirection: 'column', gap: 2 }}>
 					<CustomList {...hinnasto} />
 
-					<Typography>
-						Teippausta halutessasi kirjoita varauksen yhteydessä
-						lisätietoihin alue ja vaiva
-					</Typography>
-
 					<Box>
 						<Typography variant='h2'>Ajanvaraus</Typography>
 						<Typography>
-							Esteen tullessa peru 24h ennen varattua aikaa
-							sähköpostiisi tulleesta linkistä, soittamalla tai
-							tekstiviestillä. Peruuttamattomasta tai alle 24h
-							peruutetusta ajasta veloitan 100%.
-						</Typography>
-						<Typography>
-							Jos tulet ensimmäistä kertaa paikalle, saavuthan 5
-							minuuttia aiemmin paikalle.
+							Mikäli olet estynyt saapumaan, peruthan aikasi
+							viimeistään edellisenä päivä klo. 18:00 mennessä.
+							Peruuttamattomasta ajasta veloitamme 85% hoidon
+							hinnasta.
 						</Typography>
 					</Box>
 
