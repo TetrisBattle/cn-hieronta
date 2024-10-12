@@ -1,6 +1,7 @@
 import { Menu as MenuIcon } from '@mui/icons-material'
 import { Drawer, IconButton, Link, MenuItem } from '@thng/react'
 import { RouteOption } from 'App/Routes'
+import { useStore } from 'hooks/useStore'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -10,6 +11,7 @@ type LinkButtonProps = {
 }
 
 export const HeaderMenu = () => {
+	const { appStore } = useStore()
 	const [open, setOpen] = useState(false)
 
 	const toggleOpen = () => setOpen((prev) => !prev)
@@ -63,7 +65,7 @@ export const HeaderMenu = () => {
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<MenuItem onClick={toggleOpen}>
 					<Link
-						href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
+						href={appStore.ajanvarausLinkki}
 						target='_blank'
 						sx={{
 							color: (theme) =>

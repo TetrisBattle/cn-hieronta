@@ -1,6 +1,8 @@
 import { Box, Link, Typography, useTheme } from '@mui/material'
+import { useStore } from 'hooks/useStore'
 
 export const Summary = () => {
+	const { appStore } = useStore()
 	const theme = useTheme()
 
 	return (
@@ -40,7 +42,7 @@ export const Summary = () => {
 				<Typography>
 					Siirry ajanvaraus kalenteriin&nbsp;
 					<Link
-						href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
+						href={appStore.ajanvarausLinkki}
 						target='_blank'
 						color={theme.palette.text.primary}
 						fontWeight={theme.typography.fontWeightBold}

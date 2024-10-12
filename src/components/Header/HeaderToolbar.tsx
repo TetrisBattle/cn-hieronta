@@ -1,5 +1,6 @@
 import { Box, Button, Toolbar, useTheme } from '@mui/material'
 import { RouteOption } from 'App/Routes'
+import { useStore } from 'hooks/useStore'
 import { NavLink } from 'react-router-dom'
 
 type LinkButtonProps = {
@@ -8,6 +9,7 @@ type LinkButtonProps = {
 }
 
 export const HeaderToolbar = () => {
+	const { appStore } = useStore()
 	const theme = useTheme()
 
 	const LinkButton = ({ route, children }: LinkButtonProps) => {
@@ -59,7 +61,7 @@ export const HeaderToolbar = () => {
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<Button
 					variant='text'
-					href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
+					href={appStore.ajanvarausLinkki}
 					target='_blank'
 					sx={{
 						minWidth: 'max-content',

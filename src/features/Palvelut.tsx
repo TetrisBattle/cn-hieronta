@@ -7,6 +7,7 @@ import {
 	ListItemText,
 	Box,
 } from '@mui/material'
+import { useStore } from 'hooks/useStore'
 import { observer } from 'mobx-react-lite'
 
 type CustomListProps = {
@@ -48,6 +49,8 @@ export const CustomList = ({ title, items }: CustomListProps) => {
 }
 
 export const Palvelut = observer(() => {
+	const { appStore } = useStore()
+
 	const klassinenHieronta = {
 		title: 'Klassinen hieronta',
 		items: [
@@ -165,7 +168,7 @@ export const Palvelut = observer(() => {
 
 					<Box>
 						<Button
-							href='https://nettivaraus6.ajas.fi/fi/6a0d5e7c3a50'
+							href={appStore.ajanvarausLinkki}
 							target='_blank'
 							sx={{
 								borderRadius: 99,
