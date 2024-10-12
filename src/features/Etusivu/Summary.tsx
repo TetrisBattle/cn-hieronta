@@ -1,4 +1,4 @@
-import { Box, Link, Typography, useTheme } from '@mui/material'
+import { Link, Stack, Typography, useTheme } from '@mui/material'
 import { useStore } from 'hooks/useStore'
 
 export const Summary = () => {
@@ -6,51 +6,52 @@ export const Summary = () => {
 	const theme = useTheme()
 
 	return (
-		<Box
+		<Stack
 			sx={{
-				p: 3,
-				textAlign: 'center',
-				display: 'flex',
-				flexDirection: 'column',
+				py: 2,
+				px: 3,
 				gap: 1,
+				mx: 'auto',
+				maxWidth: 720,
 			}}
 		>
 			<Typography
 				sx={{
 					fontSize: (theme) => theme.typography.pxToRem(20),
 					fontWeight: theme.typography.fontWeightBold,
+					textAlign: 'center',
 				}}
 			>
-				Hierontaa Oulun keskustassa
+				Hierontaa Oulun Etu-Lyötyssä Kuntomon tiloissa
 			</Typography>
 
-			<Box>
-				<Typography>
-					Ammattilaisen apua lihaskireyksiin tai rentoutumiseen.
-				</Typography>
-				<Typography>
-					Monipuolisia hoitokeinoja ja kehon hyvinvointia.
-				</Typography>
-			</Box>
+			<Typography>
+				Ammattilaisen apua lihaskireyksiin tai rentoutumiseen.
+				Monipuolisia hoitokeinoja ja kehon hyvinvointia.
+			</Typography>
 
-			<Box>
-				<Typography>
-					Toimitila sijaitsee Pataässän vieressä osoitteessa
-					Harjapäänkatu 33, 90400 Oulu.
-				</Typography>
-				<Typography>Sisäänpääsy summeria soittamalla.</Typography>
-				<Typography>
-					Siirry ajanvaraus kalenteriin&nbsp;
-					<Link
-						href={appStore.ajanvarausLinkki}
-						target='_blank'
-						color={theme.palette.text.primary}
-						fontWeight={theme.typography.fontWeightBold}
-					>
-						tästä.
-					</Link>
-				</Typography>
-			</Box>
-		</Box>
+			<Typography>
+				Olen ammatinharjoittajana Kuntomon Etu- Lyötyssä. Kuntomo löytyy
+				osoitteesta {appStore.address}. Käynti sisäpihan kautta, josta
+				löytyy myös parkkipaikka.
+			</Typography>
+
+			<Typography>
+				<b>Hox!</b> Lahjakortit, jotka ovat osoitettu CN
+				hierontapalvelulle, tulee käyttää ennen elokuun 15.2024
+			</Typography>
+
+			<Typography>
+				Siirry ajanvaraus kalenteriin&nbsp;
+				<Link
+					href={appStore.ajanvarausLinkki}
+					target='_blank'
+					color={theme.palette.text.primary}
+					fontWeight={theme.typography.fontWeightBold}
+				>
+					tästä.
+				</Link>
+			</Typography>
+		</Stack>
 	)
 }

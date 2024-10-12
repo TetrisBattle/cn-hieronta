@@ -59,9 +59,9 @@ export const HeaderMenu = () => {
 				<LinkButton route={RouteOption.Palvelut}>
 					Palvelut/Hinnasto
 				</LinkButton>
-				<LinkButton route={RouteOption.Yhteystiedot}>
+				{/* <LinkButton route={RouteOption.Yhteystiedot}>
 					Yhteystiedot
-				</LinkButton>
+				</LinkButton> */}
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<MenuItem onClick={toggleOpen}>
 					<Link

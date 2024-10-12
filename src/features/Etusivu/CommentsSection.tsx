@@ -31,6 +31,9 @@ const Comments = ({
 				display: 'flex',
 				flexDirection: 'column',
 				gap: 1,
+				transform: {
+					lg: `translateX(-${240 / 2 + 4 * 8}px)`,
+				},
 			}}
 		>
 			<Typography>

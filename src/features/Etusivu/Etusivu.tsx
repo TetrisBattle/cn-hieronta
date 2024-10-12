@@ -9,8 +9,7 @@ export const Etusivu = () => {
 			<Summary />
 			<Box
 				sx={{
-					textAlign: 'center',
-					p: 3,
+					px: 3,
 					maxWidth: 720,
 					mx: 'auto',
 				}}
@@ -36,7 +35,9 @@ export const Etusivu = () => {
 					></iframe>
 				</Box>
 
-				<Typography>Video ja kuvat: Marjo Karinkanta</Typography>
+				<Typography sx={{ textAlign: 'center' }}>
+					Video ja kuvat: Marjo Karinkanta
+				</Typography>
 			</Box>
 			<Guide />
 			<CommentsSection />

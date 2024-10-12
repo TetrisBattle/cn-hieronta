@@ -55,9 +55,9 @@ export const HeaderToolbar = () => {
 				<LinkButton route={RouteOption.Palvelut}>
 					Palvelut/Hinnasto
 				</LinkButton>
-				<LinkButton route={RouteOption.Yhteystiedot}>
+				{/* <LinkButton route={RouteOption.Yhteystiedot}>
 					Yhteystiedot
-				</LinkButton>
+				</LinkButton> */}
 				<LinkButton route={RouteOption.Yritys}>Yritys</LinkButton>
 				<Button
 					variant='text'

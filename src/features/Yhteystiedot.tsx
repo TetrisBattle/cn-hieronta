@@ -1,7 +1,9 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import maps from 'assets/google_maps.png'
+import { useStore } from 'hooks/useStore'
 
 export const Yhteystiedot = () => {
+	const { appStore } = useStore()
 	const theme = useTheme()
 
 	return (
@@ -33,7 +35,7 @@ export const Yhteystiedot = () => {
 					},
 				}}
 			>
-				<Typography>Harjapäänkatu 33, 90400 Oulu</Typography>
+				<Typography>{appStore.address}</Typography>
 				<Typography>Oven avaus ovisummerilla</Typography>
 				<br />
 				<Typography>Puhelinnumero: +358 451420611</Typography>

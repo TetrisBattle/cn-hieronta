@@ -38,7 +38,8 @@ export const Yritys = () => {
 				<Typography>
 					Olen Cam Tu Nguyen, aiemmalta ammatiltani olen lähihoitaja.
 					2021 kävin kuntosalivalmennus kurssin, sekä valmistuin
-					Suomen hierojakoulusta koulutetuksi hierojaksi.
+					Suomen hierojakoulusta koulutetuksi hierojaksi. Tällä
+					hetkellä olen ammatinharjoittajana Kuntomossa.
 				</Typography>
 				<Typography>
 					Teen klassista-, urheilu- ja purentalihasten hierontaa.

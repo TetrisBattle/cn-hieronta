@@ -6,8 +6,10 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import edenred from 'assets/payments/edenred.webp'
 import smartum from 'assets/payments/smartum.png'
 import epassi from 'assets/payments/epassi.webp'
+import { useStore } from 'hooks/useStore'
 
 export const Footer = () => {
+	const { appStore } = useStore()
 	const theme = useTheme()
 
 	return (
@@ -52,19 +54,11 @@ export const Footer = () => {
 						alignItems: 'center',
 						textAlign: 'center',
 					},
-					[theme.breakpoints.down('sm')]: {
-						'[data-testid=LocationOnIcon]': {
-							display: 'none',
-						},
-						'[data-testid=LocationOnIcon] + .MuiTypography-root': {
-							maxWidth: '24ch',
-						},
-					},
 				}}
 			>
 				<Box sx={contactInfoBoxStyle}>
 					<LocationOnIcon />
-					<Typography>Harjapäänkatu 33, 90400 Oulu</Typography>
+					<Typography>{appStore.address}</Typography>
 				</Box>
 				<Box sx={{ display: 'flex' }}>
 					<Link
